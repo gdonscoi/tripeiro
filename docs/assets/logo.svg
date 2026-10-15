@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <title>Tripeiro: logo (fundo claro)</title>
+  <g fill="none" stroke="#7040C0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 16 C72 10 84 12 88 20 C98 22 104 32 102 42 C108 50 108 62 102 70 C106 80 100 92 90 94 C86 104 72 108 64 102"/>
+    <path d="M56 16 C48 10 36 12 32 20 C22 22 16 32 18 42 C12 50 12 62 18 70 C14 80 20 92 30 94 C34 104 48 108 56 102"/>
+    <path d="M60 27.9 C62.1 27.9 63.5 30.7 63.5 34.9 L63.5 51.7 L90.1 65.7 L90.1 70.6 L63.5 62.9 L63.5 78.3 L71.2 83.9 L71.2 87.4 L60 84.6 L48.8 87.4 L48.8 83.9 L56.5 78.3 L56.5 62.9 L29.9 70.6 L29.9 65.7 L56.5 51.7 L56.5 34.9 C56.5 30.7 57.9 27.9 60 27.9 Z"/>
+    <path d="M60 17 L60 22 M60 90 L60 102"/>
+    <path d="M70 27 C76 21 86 23 88 31 M71 44 C77 37 88 39 92 47 M97 55 C93 59 95 65 100 67 M72 76 C80 72 90 76 90 84 M50 27 C44 21 34 23 32 31 M49 44 C43 37 32 39 28 47 M23 55 C27 59 25 65 20 67 M48 76 C40 72 30 76 30 84"/>
+  </g>
+  <text x="138" y="77" font-family="Roboto, 'Segoe UI', system-ui, sans-serif" font-size="46" font-weight="500" fill="#7040C0">Tripeiro</text>
+</svg>

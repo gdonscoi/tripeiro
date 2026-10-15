@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tripeiro · Planeje com sua IA</title>
+<meta name="description" content="Skill do Tripeiro para planejar viagens com a sua IA e importar o resultado no app.">
+<link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg:#FAF9FC; --surface:#FFFFFF; --raised:#F2EFF7; --text:#282332; --muted:#6E657C; --line:#DED8E8;
+    --primary:#7040C0; --hover:#5E32A8; --on:#FFFFFF; --soft:#EEE7F8; --softtext:#6435AC; --error:#AC3046;
+    --radius:16px; color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#17141D; --surface:#211C2A; --raised:#2B2436; --text:#F3EEF8; --muted:#B8ADC8; --line:#44384F;
+      --primary:#BB9AF0; --hover:#CCB2F6; --on:#241336; --soft:#352746; --softtext:#D6BDFB; --error:#FF9BAA;
+      color-scheme:dark;
+    }
+    .logo-light { display:none; }
+    .logo-dark { display:block !important; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Segoe UI", Roboto, system-ui, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  header { padding:16px 0 8px; }
+  header img { width:240px; max-width:70%; height:auto; }
+  .logo-dark { display:none; }
+  h1 { font-size:1.9rem; line-height:1.25; margin:16px 0 8px; }
+  h2 { font-size:1.35rem; margin:40px 0 12px; }
+  h3 { font-size:1.05rem; margin:20px 0 6px; }
+  p, li { color:var(--text); }
+  .lead { font-size:1.1rem; color:var(--muted); }
+  a { color:var(--primary); }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin:16px 0; }
+  .soft { background:var(--soft); color:var(--softtext); border:none; }
+  ol.steps { padding-left:1.3em; }
+  ol.steps li { margin:8px 0; }
+  .button { display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:12px 20px; border-radius:999px;
+    background:var(--primary); color:var(--on); text-decoration:none; font-weight:600; border:none; font-size:1rem; cursor:pointer; }
+  .button:hover { background:var(--hover); }
+  .button.secondary { background:var(--soft); color:var(--softtext); }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; margin:12px 0; }
+  code, pre { font-family:Consolas, "Roboto Mono", monospace; font-size:.9rem; }
+  code { background:var(--raised); padding:1px 6px; border-radius:6px; }
+  pre { background:var(--raised); padding:16px; border-radius:12px; overflow-x:auto; white-space:pre; }
+  blockquote { margin:0; padding:12px 16px; border-left:4px solid var(--primary); background:var(--raised); border-radius:0 12px 12px 0; }
+  table { width:100%; border-collapse:collapse; display:block; overflow-x:auto; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .muted { color:var(--muted); font-size:.95rem; }
+  #copy-status { margin-left:4px; color:var(--muted); }
+  footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
+  :focus-visible { outline:3px solid var(--primary); outline-offset:2px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <img class="logo-light" src="assets/logo.svg" alt="Tripeiro" width="320" height="120">
+  <img class="logo-dark" src="assets/logo-escuro.svg" alt="Tripeiro" width="320" height="120">
+  <h1>Planeje com sua IA</h1>
+  <p class="lead">Converse com a IA que você já usa, receba o roteiro pronto e importe como uma nova viagem no Tripeiro. Você pode modificar e fazer ajustes finos quando quiser pelo app.</p>
+</header>
+
+<div class="card soft">
+  A IA fica fora do app: o Tripeiro não se conecta à sua conta de IA, não usa chave nem envia seus dados. Você copia o resultado da conversa e cola no app, que confere tudo no celular, sem internet. Esta página só distribui a skill; ela não recebe nem guarda roteiros.
+</div>
+
+<h2 id="como-funciona">Como funciona</h2>
+<ol class="steps">
+  <li><strong>Prepare sua IA:</strong> instale a skill do Tripeiro ou copie as instruções para a conversa (veja abaixo).</li>
+  <li><strong>Planeje sua viagem:</strong> converse sobre destino, datas, preferências e o que já está reservado. Um roteiro já discutido também serve.</li>
+  <li><strong>Peça o resultado:</strong> <em>“Prepare este roteiro para importar no Tripeiro usando a skill.”</em></li>
+  <li><strong>Traga para o app:</strong> copie o bloco inteiro e, no Tripeiro, toque em <strong>Planeje com sua IA → Já tenho o resultado</strong> (na tela inicial) ou em <strong>⋮ → Importar da IA</strong>. Revise e toque em <strong>Criar nova viagem</strong>.</li>
+</ol>
+<p class="muted">Cada importação cria uma nova viagem; as viagens que você já tem não mudam. Anexos e imagens da conversa não são transferidos.</p>
+
+<h2 id="baixar">Baixar a skill</h2>
+<div class="card">
+  <p><strong>Skill 1.0.0</strong> · formato <code>tripeiro-plan</code> versão 1 · licença MIT</p>
+  <div class="actions">
+    <a class="button" href="downloads/tripeiro-skill-1.0.0.zip" download>Baixar tripeiro-skill-1.0.0.zip</a>
+    <a class="button secondary" href="https://github.com/gdonscoi/tripeiro/tree/main/skills/tripeiro">Ver os arquivos</a>
+  </div>
+  <p class="muted">O ZIP tem a pasta <code>tripeiro/</code> com <code>SKILL.md</code>, a referência do formato e um exemplo fictício, no padrão aberto <a href="https://agentskills.io/specification">Agent Skills</a>. Não há programas para executar.</p>
+</div>
+
+<h2 id="instalar">Instalar</h2>
+<p>Cada ferramenta tem o seu jeito de instalar skills, e nem todas aceitam. Não existe um instalador universal: siga a opção da sua ferramenta ou use a alternativa copiável.</p>
+<h3>Ferramentas compatíveis com Agent Skills</h3>
+<ul>
+  <li><strong>Claude Code:</strong> extraia o ZIP e coloque a pasta <code>tripeiro</code> em <code>~/.claude/skills/</code> (ou em <code>.claude/skills/</code> de um projeto).</li>
+  <li><strong>Outras ferramentas:</strong> procure por “skills” nas configurações ou na documentação da ferramenta e envie o ZIP ou a pasta <code>tripeiro</code>.</li>
+</ul>
+<h3 id="copiar">Alternativa: copiar as instruções</h3>
+<p>Funciona em qualquer IA de conversa, inclusive no celular: copie o texto e cole no início da conversa (ou nas instruções de um projeto). É gerado dos mesmos arquivos da skill.</p>
+<div class="actions">
+  <button class="button" id="copy" type="button">Copiar instruções</button>
+  <a class="button secondary" href="instrucoes.txt">Abrir o texto</a>
+  <span id="copy-status" role="status" aria-live="polite"></span>
+</div>
+
+<h2 id="exemplo">Exemplo de conversa</h2>
+<blockquote>Quero ir a Lisboa e ao Porto de 2 a 7 de maio de 2027. O voo já está comprado: TP 88, saída de Guarulhos dia 2 às 22:05, chegada dia 3 às 11:20. Em Lisboa ficamos no Hotel Exemplo Chiado de 3 a 5. Queremos ir de trem para o Porto no dia 5 de manhã. Prepare este roteiro para importar no Tripeiro usando a skill.</blockquote>
+<p>A IA responde com um único bloco de código, assim (trecho):</p>
+<pre><code>{
+  "format": "tripeiro-plan",
+  "version": 1,
+  "trip": { "name": "Lisboa e Porto", "destination": "Lisboa, Portugal",
+            "startDate": "2027-05-02", "endDate": "2027-05-07" },
+  "transports": [
+    { "mode": "FLIGHT", "origin": "São Paulo (GRU)", "destination": "Lisboa (LIS)",
+      "departure": "2027-05-02T22:05", "arrival": "2027-05-03T11:20", "number": "TP 88" },
+    { "mode": "TRAIN", "origin": "Lisboa", "destination": "Porto",
+      "notes": "Dia 5 de manhã; horário a definir." }
+  ],
+  ...
+}</code></pre>
+<p class="muted">Repare que o trem ficou sem horário inventado. <a href="exemplo-roteiro.json">Exemplo completo</a> · <a href="https://github.com/gdonscoi/tripeiro/blob/main/skills/tripeiro/references/formato-do-roteiro.md">Referência do formato</a></p>
+
+<h2 id="importar">Importar no Tripeiro</h2>
+<ol class="steps">
+  <li>Na conversa, copie o bloco de código inteiro (muitas IAs têm um botão “Copiar” no bloco).</li>
+  <li>No Tripeiro, toque em <strong>Planeje com sua IA → Já tenho o resultado</strong> ou em <strong>⋮ → Importar da IA</strong>.</li>
+  <li>Toque no campo, cole e toque em <strong>Revisar resultado</strong>.</li>
+  <li>Confira a viagem, os transportes, as hospedagens, o itinerário e os contatos. Sugestões de locais e horários devem ser conferidas.</li>
+  <li>Toque em <strong>Criar nova viagem</strong>. Depois, edite o que quiser pelo app.</li>
+</ol>
+
+<h2 id="problemas">Se o app recusar</h2>
+<p>O app diz o problema e, quando possível, onde ele está (por exemplo, <code>Onde: transports › 2 › departure</code>, contando a partir de 1). Leve a mensagem para a IA e peça o bloco completo corrigido.</p>
+<table>
+  <thead><tr><th>Mensagem</th><th>O que fazer</th></tr></thead>
+  <tbody>
+    <tr><td>Resultado incompleto ou danificado</td><td>Copie o bloco inteiro de novo, da primeira à última linha.</td></tr>
+    <tr><td>Mais de um bloco de código</td><td>Peça à IA um único bloco com a viagem inteira.</td></tr>
+    <tr><td>Campo que o Tripeiro não conhece</td><td>Peça à IA para seguir o formato da skill e mover informações extras para as notas.</td></tr>
+    <tr><td>Campo não usado por este tipo de item</td><td>Ex.: empresa num trecho de carro ou título numa nota. Peça para remover ou passar para as notas.</td></tr>
+    <tr><td>Horário inválido ou ausente</td><td>Só trechos de carro podem ter data sem horário. Informe a hora ou deixe sem saída/chegada.</td></tr>
+    <tr><td>Dia fora das datas da viagem</td><td>Ajuste o dia ou as datas da viagem.</td></tr>
+    <tr><td>Formato mais novo</td><td>Atualize o Tripeiro ou peça o formato versão 1.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="verificado">Versões e ferramentas verificadas</h2>
+<table>
+  <thead><tr><th>Skill</th><th>Formato</th><th>App Tripeiro</th></tr></thead>
+  <tbody><tr><td>1.0.0</td><td><code>tripeiro-plan</code> 1</td><td>Versão com “Importar da IA” e o card “Planeje com sua IA”</td></tr></tbody>
+</table>
+<p><strong>Verificado:</strong> Claude (Opus 5.5) no Claude Code, seguindo a skill numa conversa fictícia; o resultado foi aceito pelo leitor do app num teste automatizado. Outras ferramentas ainda não foram verificadas; a alternativa copiável não depende de suporte a skills.</p>
+
+<footer>
+  <p>Tripeiro é um app Android pessoal para organizar viagens offline. Skill e exemplos sob <a href="https://github.com/gdonscoi/tripeiro/blob/main/LICENSE">licença MIT</a>. Todos os dados de exemplo são fictícios.</p>
+</footer>
+</main>
+<script>
+  document.getElementById('copy').addEventListener('click', async () => {
+    const status = document.getElementById('copy-status');
+    try {
+      const text = await (await fetch('instrucoes.txt')).text();
+      await navigator.clipboard.writeText(text);
+      status.textContent = 'Instruções copiadas.';
+    } catch (e) {
+      status.textContent = 'Não foi possível copiar. Use “Abrir o texto” e copie de lá.';
+    }
+  });
+</script>
+</body>
+</html>

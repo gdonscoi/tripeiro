@@ -1,0 +1,104 @@
+{
+  "format": "tripeiro-plan",
+  "version": 1,
+  "trip": {
+    "name": "Serra Gaúcha em família",
+    "destination": "Gramado, Brasil",
+    "startDate": "2027-07-10",
+    "endDate": "2027-07-14",
+    "notes": "Viagem fictícia de exemplo. Levar casacos: julho é inverno na serra."
+  },
+  "transports": [
+    {
+      "mode": "FLIGHT",
+      "origin": "São Paulo (GRU)",
+      "destination": "Porto Alegre (POA)",
+      "departure": "2027-07-10T07:30",
+      "arrival": "2027-07-10T09:10",
+      "company": "Companhia Exemplo",
+      "number": "EX 1234",
+      "seat": "14C",
+      "booking": "ABC123",
+      "notes": "Despachar uma mala."
+    },
+    {
+      "mode": "CAR",
+      "origin": "Porto Alegre",
+      "destination": "Gramado",
+      "departure": "2027-07-10",
+      "arrival": "2027-07-10",
+      "notes": "Carro alugado no aeroporto; cerca de 2 horas de estrada."
+    },
+    {
+      "mode": "BUS",
+      "origin": "Gramado",
+      "destination": "Canela",
+      "departure": "2027-07-11T09:00"
+    },
+    {
+      "mode": "TRAIN",
+      "origin": "Bento Gonçalves",
+      "destination": "Carlos Barbosa",
+      "departure": "2027-07-12T14:00",
+      "arrival": "2027-07-12T16:30",
+      "notes": "Passeio sugerido; conferir horários antes de comprar."
+    },
+    {
+      "mode": "BOAT",
+      "origin": "Margem do lago",
+      "destination": "Ilha do lago",
+      "departure": "2027-07-13T10:00"
+    },
+    {
+      "mode": "OTHER",
+      "modeName": "Transfer",
+      "origin": "Gramado",
+      "destination": "Aeroporto de Porto Alegre",
+      "departure": "2027-07-14T13:00"
+    }
+  ],
+  "stays": [
+    {
+      "name": "Pousada Exemplo",
+      "address": "Rua Fictícia, 100, Gramado",
+      "checkIn": "2027-07-10",
+      "checkOut": "2027-07-14",
+      "notes": "Café da manhã incluso."
+    }
+  ],
+  "itinerary": [
+    {
+      "type": "ACTIVITY",
+      "day": "2027-07-11",
+      "title": "Passeio pelo centro",
+      "time": "10:30",
+      "address": "Avenida Borges de Medeiros, Gramado",
+      "notes": "Sugestão: conferir o horário de funcionamento das lojas."
+    },
+    {
+      "type": "NOTE",
+      "day": "2027-07-11",
+      "notes": "Reservar mesa para o jantar no dia anterior."
+    },
+    {
+      "type": "ACTIVITY",
+      "day": "2027-07-12",
+      "title": "Vinícolas do Vale dos Vinhedos",
+      "time": "09:00"
+    },
+    {
+      "type": "CHECKLIST",
+      "title": "Antes de sair de casa",
+      "items": [
+        { "text": "Documentos", "done": true },
+        { "text": "Carregadores" },
+        { "text": "Casacos e luvas" }
+      ]
+    }
+  ],
+  "contacts": [
+    { "kind": "PHONE", "name": "Recepção da pousada", "value": "+55 54 3000-0000" },
+    { "kind": "EMAIL", "name": "Reservas da pousada", "value": "reservas@example.com" },
+    { "kind": "LINK", "name": "Mapa da cidade", "value": "https://example.com/mapa", "notes": "Link fictício." }
+  ]
+}
