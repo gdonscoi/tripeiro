@@ -109,7 +109,7 @@ Até 200.000 caracteres no texto colado e profundidade de JSON até 10. Listas: 
 
 | Formato | App Tripeiro |
 |---|---|
-| `tripeiro-plan` versão 1 (skill 1.0.0) | Tripeiro com o menu **Importar da IA**. |
+| `tripeiro-plan` versão 1 (skill 1.0.0 e 1.0.1) | Tripeiro com o menu **Importar da IA**. |
 
 Uma versão mais nova do formato é recusada por apps antigos, com a orientação de atualizar o app.
 
