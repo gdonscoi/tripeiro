@@ -3,7 +3,7 @@ name: tripeiro
 description: Planeja viagens com a pessoa e prepara o roteiro para importar no app Tripeiro (Android), num bloco JSON "tripeiro-plan" que ela copia e cola em "Importar da IA". Use quando a pessoa quiser planejar uma viagem para o Tripeiro, transformar uma conversa ou roteiro já discutido em viagem do Tripeiro, ou pedir "prepare este roteiro para importar no Tripeiro".
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   site: https://gdonscoi.github.io/tripeiro/
   format: tripeiro-plan
   format-version: "1"
@@ -47,4 +47,4 @@ Se a viagem for grande demais para os limites do formato (ex.: mais de 500 itens
 
 ## Se o app recusar o resultado
 
-A pessoa pode trazer a mensagem do app (ex.: "Onde: transports › 2 › departure"). As listas são contadas a partir de 1. Corrija **somente** o problema apontado, mantenha o resto e entregue de novo o bloco **completo**. A tabela "Erros comuns" do formato ajuda a achar a causa.
+O app tem o botão **Copiar pedido de correção**, e a pessoa pode colar o pedido na conversa. Ele traz o problema, o local (ex.: `Onde: transports › 2 › departure · "Porto Alegre → Gramado"`, com as listas contadas a partir de 1 e o nome do item) e uma dica do formato. Corrija **somente** o problema apontado e mantenha o resto. Se o pedido disser que o app não conseguiu ler o resultado, revise o bloco inteiro: um único bloco, JSON válido e `"format"`/`"version"` corretos. Entregue sempre o bloco **completo** de novo, nunca só o trecho corrigido, porque a pessoa substitui o bloco antigo pelo novo no app. A tabela "Erros comuns" do formato ajuda a achar a causa.

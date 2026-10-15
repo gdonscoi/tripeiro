@@ -1,4 +1,4 @@
-Instruções do Tripeiro (skill 1.0.0, formato tripeiro-plan 1). Cole este texto no início da conversa ou nas instruções do projeto da sua IA.
+Instruções do Tripeiro (skill 1.0.1, formato tripeiro-plan 1). Cole este texto no início da conversa ou nas instruções do projeto da sua IA.
 Os arquivos citados abaixo (references/formato-do-roteiro.md e assets/exemplo-roteiro.json) estão incluídos no fim deste texto.
 
 # Tripeiro — planejar e preparar viagens para importar
@@ -39,7 +39,7 @@ Se a viagem for grande demais para os limites do formato (ex.: mais de 500 itens
 
 ## Se o app recusar o resultado
 
-A pessoa pode trazer a mensagem do app (ex.: "Onde: transports › 2 › departure"). As listas são contadas a partir de 1. Corrija **somente** o problema apontado, mantenha o resto e entregue de novo o bloco **completo**. A tabela "Erros comuns" do formato ajuda a achar a causa.
+O app tem o botão **Copiar pedido de correção**, e a pessoa pode colar o pedido na conversa. Ele traz o problema, o local (ex.: `Onde: transports › 2 › departure · "Porto Alegre → Gramado"`, com as listas contadas a partir de 1 e o nome do item) e uma dica do formato. Corrija **somente** o problema apontado e mantenha o resto. Se o pedido disser que o app não conseguiu ler o resultado, revise o bloco inteiro: um único bloco, JSON válido e `"format"`/`"version"` corretos. Entregue sempre o bloco **completo** de novo, nunca só o trecho corrigido, porque a pessoa substitui o bloco antigo pelo novo no app. A tabela "Erros comuns" do formato ajuda a achar a causa.
 
 ---
 
@@ -154,7 +154,7 @@ Até 200.000 caracteres no texto colado e profundidade de JSON até 10. Listas: 
 
 | Formato | App Tripeiro |
 |---|---|
-| `tripeiro-plan` versão 1 (skill 1.0.0) | Tripeiro com o menu **Importar da IA**. |
+| `tripeiro-plan` versão 1 (skill 1.0.0 e 1.0.1) | Tripeiro com o menu **Importar da IA**. |
 
 Uma versão mais nova do formato é recusada por apps antigos, com a orientação de atualizar o app.
 

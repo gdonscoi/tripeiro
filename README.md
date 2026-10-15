@@ -21,7 +21,7 @@ A IA fica fora do app: sem API, chave ou conta. O app confere o resultado no cel
 
 | Skill | Formato | App Tripeiro |
 |---|---|---|
-| 1.0.0 | `tripeiro-plan` 1 | Versão com “Importar da IA” e o card “Planeje com sua IA” |
+| 1.0.0 e 1.0.1 | `tripeiro-plan` 1 | Versão com “Importar da IA” e o card “Planeje com sua IA” |
 
 A fonte da skill é mantida junto com o app, que testa o exemplo e as regras do formato; este repositório publica cópias versionadas. Para publicar uma versão nova: atualizar `skills/tripeiro` (incluindo `metadata.version` no `SKILL.md`), rodar `powershell -ExecutionPolicy Bypass -File scripts\build.ps1` e atualizar a versão na página e nesta tabela.
 
@@ -34,3 +34,8 @@ Outras ferramentas ainda não foram verificadas. Não há instalador universal: 
 ## Licença
 
 [MIT](LICENSE). Todos os dados de exemplo são fictícios.
+
+## Histórico
+
+- **1.0.1:** orienta a IA a usar o pedido de correção copiado do app (problema, local com o nome do item e dica) e a devolver sempre o bloco completo.
+- **1.0.0:** primeira versão.
