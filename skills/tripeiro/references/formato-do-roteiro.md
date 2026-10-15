@@ -64,7 +64,7 @@ Carro: se não houver horário combinado, use só a data. **Nunca** preencha `00
 | `checkIn`, `checkOut` | `AAAA-MM-DD`; `checkOut` não anterior a `checkIn`. |
 | `booking` | Código da reserva, só se a pessoa informou. |
 | `notes` | Texto livre. |
-| `latitude`, `longitude` | Números, sempre juntos (latitude −90 a 90, longitude −180 a 180). Só se forem coordenadas conhecidas; um endereço não basta. |
+| `latitude`, `longitude` | Números, sempre juntos (latitude −90 a 90, longitude −180 a 180). Pesquise e verifique as coordenadas do local conforme a skill; um endereço por escrito não substitui este par numérico. |
 
 ### `itinerary` — atividades, notas e checklists (até 500)
 
@@ -82,6 +82,7 @@ Carro: se não houver horário combinado, use só a data. **Nunca** preencha `00
 `—` = o campo não existe para o tipo e não pode ser enviado.
 
 - `day`: `AAAA-MM-DD` dentro do período da viagem (`startDate` a `endDate`). Sem `day`, o item fica em "Sem dia definido". Itens com `day` exigem viagem com início e fim.
+- Para hospedagens e atividades, pesquise e verifique o endereço completo (`address`) e o par numérico `latitude`/`longitude` conforme a skill. São campos distintos: inclua os dados verificados e omita os que não conseguir confirmar. Latitude de −90 a 90 e longitude de −180 a 180, sempre juntas.
 - A ordem dentro de cada dia segue a ordem da lista.
 - Cada item de checklist: `{ "text": "...", "done": false }`; `text` obrigatório (até 200 caracteres), `done` opcional (padrão `false`).
 
@@ -109,7 +110,7 @@ Até 200.000 caracteres no texto colado e profundidade de JSON até 10. Listas: 
 
 | Formato | App Tripeiro |
 |---|---|
-| `tripeiro-plan` versão 1 (skill 1.0.0 e 1.0.1) | Tripeiro com o menu **Importar da IA**. |
+| `tripeiro-plan` versão 1 (skill 1.0.0 a 1.0.2) | Tripeiro com o menu **Importar da IA**. |
 
 Uma versão mais nova do formato é recusada por apps antigos, com a orientação de atualizar o app.
 

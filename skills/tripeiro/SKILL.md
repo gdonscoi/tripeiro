@@ -3,7 +3,7 @@ name: tripeiro
 description: Planeja viagens com a pessoa e prepara o roteiro para importar no app Tripeiro (Android), num bloco JSON "tripeiro-plan" que ela copia e cola em "Importar da IA". Use quando a pessoa quiser planejar uma viagem para o Tripeiro, transformar uma conversa ou roteiro já discutido em viagem do Tripeiro, ou pedir "prepare este roteiro para importar no Tripeiro".
 license: MIT
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   site: https://gdonscoi.github.io/tripeiro/
   format: tripeiro-plan
   format-version: "1"
@@ -22,9 +22,9 @@ Você não tem acesso ao app nem à conta da pessoa: o único meio de transferê
 
 ## Regras de honestidade
 
-- **Nunca invente** localizadores, códigos de reserva, números de voo, assentos, telefones, e-mails, links ou coordenadas. Inclua só o que a pessoa informou ou confirmou.
+- **Nunca invente** localizadores, códigos de reserva, números de voo, assentos, telefones, e-mails, links ou coordenadas. Inclua só o que a pessoa informou ou confirmou; para endereço e coordenadas, também use fontes confiáveis verificadas conforme a orientação abaixo.
 - Sugestões (passeios, horários, restaurantes, trajetos) são sugestões: deixe isso claro na conversa e, quando útil, em `notes` (ex.: "Sugestão: conferir horário"). Não apresente sugestão como reserva confirmada.
-- Endereço não é coordenada: só envie `latitude`/`longitude` se forem conhecidas com segurança. Na dúvida, omita.
+- Sempre que o formato aceitar `address`, `latitude` e `longitude` (hospedagens e atividades), busque o endereço completo e as coordenadas do local em fontes confiáveis, usando as ferramentas de pesquisa disponíveis. Aproveite os dados já fornecidos e confirme que o endereço e as coordenadas correspondem ao estabelecimento ou ponto de interesse correto; se houver ambiguidade, peça esclarecimento à pessoa. Inclua o endereço em `address` e as coordenadas numéricas em `latitude` e `longitude`, sempre juntas. Não use o centro da cidade como substituto do local. Se não conseguir verificar algum dado ou não tiver acesso à pesquisa, omita os campos não verificados e informe brevemente a limitação na resposta; mantenha os dados confirmados. Não acrescente esses campos a tipos que não os aceitam.
 - Horários seguem o bilhete (hora local, sem fuso). Para carro sem horário combinado, use só a data — nunca `00:00`.
 - Dados sem campo próprio (preço, avaliação, links de anexos da conversa) vão resumidos em `notes`, ou ficam de fora. Anexos e imagens da conversa **não** são transferidos para o app; avise se a pessoa contar com eles.
 
@@ -40,6 +40,7 @@ Pedido típico: "Prepare este roteiro para importar no Tripeiro usando a skill."
    - `OTHER` tem `modeName`; outros modos não têm. `CAR` não tem `company`, `number`, `seat` nem `booking`.
    - `NOTE` só tem `type`, `day` e `notes`; `CHECKLIST` tem `items` (≥ 1) e opcionalmente `title` e `day`; `ACTIVITY` tem `title`.
    - Todo `day` está dentro de `startDate`…`endDate` (e a viagem tem as duas datas).
+   - Endereço e coordenadas pesquisados para hospedagens e atividades; dados incluídos correspondem ao local correto, coordenadas estão juntas e dentro dos limites, e eventuais limitações de pesquisa foram informadas.
    - Contatos com valor real e válido (telefone com ≥ 8 dígitos, de preferência com `+código do país`).
 4. Depois do bloco, em uma ou duas linhas, diga para copiar o bloco inteiro e colar no Tripeiro (**⋮ → Importar da IA** ou **Planeje com sua IA → Já tenho o resultado** na Home), que cada importação cria uma nova viagem e que **"Você pode modificar e fazer ajustes finos quando quiser pelo app."**
 
