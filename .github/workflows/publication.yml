@@ -1,0 +1,25 @@
+name: Publicacao da skill
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'codex/**']
+
+permissions:
+  contents: read
+
+jobs:
+  publication:
+    name: Integridade da publicacao
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Verificar exemplos e arquivos publicados
+        run: python scripts/verify.py
+      - name: Verificar deteccao de inconsistencias
+        run: python -m unittest discover -s scripts -p test_verify.py -v

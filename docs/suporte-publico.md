@@ -20,7 +20,9 @@ Transformar o repositório público na central de suporte do aplicativo e da ski
 - [ ] [#6 — Formulários e processo de suporte](https://github.com/gdonscoi/tripeiro/issues/6), depende da #5.
 - [ ] [#7 — Entrada pública de ajuda](https://github.com/gdonscoi/tripeiro/issues/7), depende da #6.
 
-Ordem aprovada: proteção, atendimento e entrada pública de ajuda. Nenhuma fatia começou; este PR registra somente o planejamento aprovado e o backlog.
+Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi iniciada em 16/10/2026 na branch `codex/5-protecoes-repositorio`, após o merge do plano no PR #8 e a autorização do usuário. As fatias #6 e #7 ainda não começaram. O checklist acima será marcado após o merge confirmado de cada entrega.
+
+O funcionamento dos checks, as configurações administrativas e os limites de validação da primeira fatia estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). A #5 está implementada no [PR #9](https://github.com/gdonscoi/tripeiro/pull/9), com checks locais e no GitHub aprovados e configurações administrativas aplicadas. Aguarda merge autorizado e conferência posterior na main; ainda não está marcada como entregue.
 
 ## 1. Proteções do repositório
 

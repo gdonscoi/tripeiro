@@ -3,10 +3,12 @@
 #   docs/instrucoes.txt                          (alternativa copiável: SKILL.md + formato + exemplo)
 #   docs/exemplo-roteiro.json
 # Uso, na raiz do repositório:  powershell -ExecutionPolicy Bypass -File scripts\build.ps1
+param([string]$OutputDirectory)
+
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $skill = Join-Path $root 'skills\tripeiro'
-$docs = Join-Path $root 'docs'
+$docs = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $root 'docs' }
 $utf8 = New-Object System.Text.UTF8Encoding $false
 
 $skillText = [IO.File]::ReadAllText((Join-Path $skill 'SKILL.md'), $utf8)
