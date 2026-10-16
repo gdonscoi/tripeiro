@@ -2,11 +2,15 @@
 
 Skill para planejar viagens com a IA que você já usa e importar o resultado como uma nova viagem no **Tripeiro**, app Android pessoal para organizar viagens offline.
 
-Página: https://gdonscoi.github.io/tripeiro/
+Veja o [guia de uso](https://gdonscoi.github.io/tripeiro/) ou [baixe a skill 1.0.2](https://gdonscoi.github.io/tripeiro/downloads/tripeiro-skill-1.0.2.zip).
 
 - [`skills/tripeiro/`](skills/tripeiro/SKILL.md): a skill no padrão aberto [Agent Skills](https://agentskills.io/specification), com a [referência do formato `tripeiro-plan`](skills/tripeiro/references/formato-do-roteiro.md) e um [exemplo fictício](skills/tripeiro/assets/exemplo-roteiro.json).
-- [`docs/`](docs/): a página publicada pelo GitHub Pages, o ZIP versionado e as instruções copiáveis.
-- [`scripts/build.ps1`](scripts/build.ps1): gera `docs/downloads/tripeiro-skill-<versão>.zip`, `docs/instrucoes.txt` e `docs/exemplo-roteiro.json` a partir de `skills/tripeiro`.
+
+## Instalar
+
+Baixe o ZIP e extraia a pasta `tripeiro`. No Claude Code, coloque essa pasta em `~/.claude/skills/` ou em `.claude/skills/` de um projeto. Em outras ferramentas compatíveis com Agent Skills, siga as instruções de instalação da ferramenta.
+
+Se a sua IA não aceitar skills, [abra as instruções](https://gdonscoi.github.io/tripeiro/instrucoes.txt), copie o texto e cole no início da conversa ou nas instruções de um projeto.
 
 ## Como funciona
 
@@ -23,13 +27,9 @@ A IA fica fora do app: sem API, chave ou conta. O app confere o resultado no cel
 |---|---|---|
 | 1.0.0 a 1.0.2 | `tripeiro-plan` 1 | Versão com “Importar da IA” e o card “Planeje com sua IA” |
 
-A fonte da skill é mantida junto com o app, que testa o exemplo e as regras do formato; este repositório publica cópias versionadas. Para publicar uma versão nova: atualizar `skills/tripeiro` (incluindo `metadata.version` no `SKILL.md`), rodar `powershell -ExecutionPolicy Bypass -File scripts\build.ps1` e atualizar a versão na página e nesta tabela.
+## Compatibilidade com ferramentas
 
-## Ferramentas verificadas
-
-- Claude (Opus 5.5) no Claude Code, seguindo a skill numa conversa fictícia; o resultado foi aceito pelo leitor do app num teste automatizado.
-
-Outras ferramentas ainda não foram verificadas. Não há instalador universal: cada ferramenta tem o seu jeito de instalar skills.
+Use uma ferramenta compatível com Agent Skills, como o Claude Code, ou copie as instruções para a sua IA de conversa. A instalação depende da ferramenta escolhida.
 
 ## Licença
 
