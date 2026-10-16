@@ -66,6 +66,21 @@ Antes do merge da #6: revisar YAML, IDs, tipos de campo, campos obrigatórios, o
 
 Revisão local em 16/10/2026: YAML carregado com PyYAML 6.0.3 temporário, estrutura e IDs conferidos (9 campos no formulário do app, 11 no da skill e 4 no de sugestões), campos obrigatórios e capturas opcionais conferidos, opções sem duplicatas e links locais dos seis documentos válidos. O seletor configura `blank_issues_enabled: false` e os dois encaminhamentos. O verificador da publicação passou sem alterar a skill nem os downloads.
 
-Após o merge autorizado da #6: conferir o seletor e os três formulários renderizados, a ausência da opção em branco para visitantes externos, os links de suporte e segurança e o workflow da main. A abertura efetiva por usuário externo depende de conta externa e deve ser registrada como não testada se ela não estiver disponível. O GitHub só disponibiliza os formulários da branch padrão; essa conferência permanece pendente enquanto o PR não tiver sido mesclado.
+Após o merge do PR #10, o [workflow da main](https://github.com/gdonscoi/tripeiro/actions/runs/38930185570) e o [deploy do Pages](https://github.com/gdonscoi/tripeiro/actions/runs/38930185538) passaram. A API confirmou os arquivos dos formulários na main e o canal privado ativo. O navegador de QA estava sem login e redirecionou o seletor para autenticação; o usuário então confirmou em sua sessão que os três formulários aparecem e abrem corretamente, em resposta à conferência dos campos e links de ajuda/segurança. A opção em branco foi conferida pela configuração, sem conta externa para testar envio. Nenhuma issue ou vulnerabilidade fictícia foi enviada.
+
+## Entrada pública de ajuda
+
+A fatia #7 atualiza `README.md` e `docs/index.html` com atalhos para instalação, importação, problemas no app, problemas na skill/IA, sugestões, guia de suporte e canal privado de vulnerabilidades. Os links dos formulários usam os nomes dos arquivos já entregues na main. As perguntas frequentes explicam conta GitHub, alternativa copiável, importação, correção de resultados, privacidade e acompanhamento de relatos. O histórico publicado é apenas da skill, com as versões 1.0.0, 1.0.1 e 1.0.2 já documentadas; nenhuma versão do aplicativo foi inventada.
+
+Validações locais em 16/10/2026:
+
+- Links anteriores preservados, IDs únicos e âncoras da página e do README conferidas. Links dos formulários e guias apontam para arquivos existentes.
+- Downloads, instruções, exemplo e assets responderam HTTP 200 no servidor local. O verificador da distribuição passou sem mudar a skill nem os downloads.
+- Preview inspecionado em 360 px e 1280 px sem rolagem horizontal da página. Controles de suporte medidos com altura de pelo menos 48 px.
+- FAQ aberto por clique e fechado por Enter; botão existente de copiar instruções apresentou confirmação de sucesso.
+- Tokens escuros e fonte ampliada foram inspecionados em cópias temporárias da página, com CSS de QA forçado fora do arquivo entregue. O browser não ofereceu emulação de preferência do sistema; a troca real de tema pelo sistema não foi exercitada. Preview com texto ampliado em 320 px também sem rolagem horizontal da página. Paleta e regras de tema originais preservadas.
+- Console do preview sem erros. Nenhum pacote, workflow, coletor de dados ou hosting novo foi adicionado.
+
+Após o merge autorizado da #7: confirmar workflow da main, publicação do Pages e presença dos atalhos, FAQ e histórico na URL pública. Essa publicação permanece pendente até o merge. Não se aplicam build ou testes Android. Testes com TalkBack ou outros leitores de tela não foram executados no preview web.
 
 Referências: [restrição de PRs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests), [rulesets](https://docs.github.com/en/rest/repos/rules), [segurança do Actions](https://docs.github.com/en/actions/reference/security/secure-use) e [relato privado de vulnerabilidades](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting).
