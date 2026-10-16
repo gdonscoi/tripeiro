@@ -22,7 +22,7 @@ Transformar o repositório público na central de suporte do aplicativo e da ski
 
 Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi iniciada em 16/10/2026 na branch `codex/5-protecoes-repositorio`, após o merge do plano no PR #8 e a autorização do usuário. As fatias #6 e #7 ainda não começaram. O checklist acima será marcado após o merge confirmado de cada entrega.
 
-O funcionamento dos checks, as configurações administrativas e os limites de validação da primeira fatia estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). A implementação da #5 aguarda validação no GitHub e merge autorizado.
+O funcionamento dos checks, as configurações administrativas e os limites de validação da primeira fatia estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). A #5 está implementada no [PR #9](https://github.com/gdonscoi/tripeiro/pull/9), com checks locais e no GitHub aprovados e configurações administrativas aplicadas. Aguarda merge autorizado e conferência posterior na main; ainda não está marcada como entregue.
 
 ## 1. Proteções do repositório
 

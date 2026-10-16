@@ -72,9 +72,9 @@ def verify(root):
     version = match[1]
     for path in (skill / "assets/exemplo-roteiro.json", root / "docs/exemplo-roteiro.json"):
         check_example(path)
-    shell = shutil.which("pwsh") or shutil.which("powershell")
+    shell = shutil.which("pwsh")
     if not shell:
-        raise ValueError("PowerShell não encontrado para executar scripts/build.ps1")
+        raise ValueError("PowerShell 7 (pwsh) não encontrado para executar scripts/build.ps1")
     # Diretório exclusivo criado pelo próprio processo, removido ao sair.
     with tempfile.TemporaryDirectory(prefix="tripeiro-verify-") as temporary:
         output = Path(temporary).resolve()
