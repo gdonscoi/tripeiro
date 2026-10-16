@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tripeiro · Planeje com sua IA</title>
-<meta name="description" content="Skill do Tripeiro para planejar viagens com a sua IA e importar o resultado no app.">
+<title>Tripeiro · Planeje com sua IA e encontre ajuda</title>
+<meta name="description" content="Instale a skill do Tripeiro, importe roteiros da sua IA e encontre ajuda, relatos de problemas, sugestões e novidades.">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <style>
   :root {
@@ -42,6 +42,11 @@
   .button:hover { background:var(--hover); }
   .button.secondary { background:var(--soft); color:var(--softtext); }
   .actions { display:flex; flex-wrap:wrap; gap:12px; margin:12px 0; }
+  .quicklinks { display:flex; flex-wrap:wrap; gap:4px 20px; margin:12px 0; }
+  .quicklinks a { display:inline-flex; align-items:center; min-height:48px; text-underline-offset:4px; }
+  details { padding:12px 0; border-bottom:1px solid var(--line); }
+  summary { min-height:48px; padding:10px 0; font-weight:600; cursor:pointer; }
+  details p { margin:8px 0 12px; }
   code, pre { font-family:Consolas, "Roboto Mono", monospace; font-size:.9rem; }
   code { background:var(--raised); padding:1px 6px; border-radius:6px; }
   pre { background:var(--raised); padding:16px; border-radius:12px; overflow-x:auto; white-space:pre; }
@@ -63,8 +68,16 @@
   <p class="lead">Converse com a IA que você já usa, receba o roteiro pronto e importe como uma nova viagem no Tripeiro. Você pode modificar e fazer ajustes finos quando quiser pelo app.</p>
 </header>
 
+<nav class="quicklinks" aria-label="Nesta página">
+  <a href="#instalar">Instalar</a>
+  <a href="#importar">Como usar</a>
+  <a href="#ajuda">Ajuda e suporte</a>
+  <a href="#perguntas">Perguntas frequentes</a>
+  <a href="#historico">Novidades da skill</a>
+</nav>
+
 <div class="card soft">
-  A IA fica fora do app: o Tripeiro não se conecta à sua conta de IA, não usa chave nem envia seus dados. Você copia o resultado da conversa e cola no app, que confere tudo no celular, sem internet. Esta página só distribui a skill; ela não recebe nem guarda roteiros.
+  A IA fica fora do app: o Tripeiro não se conecta à sua conta de IA, não usa chave nem envia seus dados. Você copia o resultado da conversa e cola no app, que confere tudo no celular, sem internet. Esta página distribui a skill e reúne os links de ajuda; ela não recebe nem guarda roteiros.
 </div>
 
 <h2 id="como-funciona">Como funciona</h2>
@@ -143,6 +156,50 @@
   </tbody>
 </table>
 
+<h2 id="ajuda">Ajuda e suporte</h2>
+<p>Algo não funcionou ou você tem uma ideia para melhorar o Tripeiro? O suporte do aplicativo e da skill fica nas issues públicas do GitHub. <a href="https://github.com/gdonscoi/tripeiro/issues?q=is%3Aissue">Procure nos relatos existentes</a> antes de abrir um novo; se encontrar o mesmo caso, acrescente suas informações lá.</p>
+<div class="card">
+  <h3>Escolha o que você precisa</h3>
+  <div class="actions">
+    <a class="button" href="https://github.com/gdonscoi/tripeiro/issues/new?template=01-bug-app.yml">Problema no aplicativo</a>
+    <a class="button secondary" href="https://github.com/gdonscoi/tripeiro/issues/new?template=02-bug-skill.yml">Problema na skill ou IA</a>
+    <a class="button secondary" href="https://github.com/gdonscoi/tripeiro/issues/new?template=03-sugestao.yml">Sugerir uma melhoria</a>
+  </div>
+  <p><strong>É necessário ter conta no GitHub para enviar ou comentar. O relato e os anexos serão públicos.</strong> Use exemplos fictícios e oculte dados pessoais, bilhetes, localizadores, reservas e documentos. Não envie a viagem completa nem sua conversa com a IA.</p>
+  <p>Informe versões, aparelho ou ferramenta utilizada, passos, resultado esperado e o que aconteceu. Capturas de tela são opcionais. Se não souber alguma versão, diga que não sabe.</p>
+  <p><a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.md">Como funciona o suporte e como acompanhar sua issue</a></p>
+</div>
+<div class="card soft">
+  <h3>Falha de segurança ou exposição de dados?</h3>
+  <p>Use o <a href="https://github.com/gdonscoi/tripeiro/security/advisories/new">canal privado de vulnerabilidades</a>, que também exige conta no GitHub. Não publique os detalhes em uma issue. Veja a <a href="https://github.com/gdonscoi/tripeiro/blob/main/SECURITY.md">política de segurança</a> para saber o que informar.</p>
+</div>
+
+<h2 id="perguntas">Perguntas frequentes</h2>
+<details>
+  <summary>Preciso de uma conta no GitHub para usar a skill?</summary>
+  <p>Não. Você pode baixar a skill ou abrir e copiar as instruções desta página sem conta no GitHub. Para enviar ou comentar um relato, sugestão ou vulnerabilidade no GitHub, é necessário entrar em uma conta. A ferramenta de IA escolhida pode ter seus próprios requisitos de acesso.</p>
+</details>
+<details>
+  <summary>Minha ferramenta não aceita skills. Como faço?</summary>
+  <p>Use a <a href="#copiar">alternativa copiável</a>: abra as instruções e cole o texto no início da conversa ou nas instruções de um projeto da sua IA.</p>
+</details>
+<details>
+  <summary>A importação altera uma viagem que já existe?</summary>
+  <p>Não. Cada importação cria uma nova viagem depois da sua revisão. As viagens existentes não mudam, e anexos e imagens da conversa não são transferidos.</p>
+</details>
+<details>
+  <summary>O Tripeiro recusou o resultado da IA. O que fazer?</summary>
+  <p>Use o <strong>Copiar pedido de correção</strong> no app e cole o pedido na conversa com a IA. Depois, limpe o campo e cole o novo bloco completo. Consulte também as <a href="#problemas">mensagens e orientações de correção</a>. Se o problema continuar, use o formulário de <a href="https://github.com/gdonscoi/tripeiro/issues/new?template=02-bug-skill.yml">problema na skill ou importação da IA</a>, com um exemplo fictício.</p>
+</details>
+<details>
+  <summary>Preciso enviar minha viagem para relatar um problema?</summary>
+  <p>Não. Descreva os passos com dados fictícios e, se ajudar, inclua uma captura com informações pessoais ocultadas. Não envie a viagem completa, bilhetes, documentos, reservas nem sua conversa inteira com a IA. Suspeitas de vulnerabilidade vão para o canal privado de segurança.</p>
+</details>
+<details>
+  <summary>Como acompanho uma correção ou sugestão?</summary>
+  <p>Acompanhe os comentários na sua issue e use a opção de inscrição do GitHub para receber atualizações. O mantenedor pode pedir mais informações e informa a versão corrigida ou a alteração publicada quando houver uma entrega. Sugestões são avaliadas, sem prazo de implementação garantido. Veja o <a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.md">guia de suporte</a>.</p>
+</details>
+
 <h2 id="verificado">Versões e compatibilidade</h2>
 <table>
   <thead><tr><th>Skill</th><th>Formato</th><th>App Tripeiro</th></tr></thead>
@@ -150,8 +207,21 @@
 </table>
 <p>Use uma ferramenta compatível com Agent Skills, como o Claude Code, ou copie as instruções para a sua IA de conversa. A instalação depende da ferramenta escolhida.</p>
 
+<h2 id="historico">Novidades da skill</h2>
+<p class="muted">Este histórico é da skill distribuída nesta página.</p>
+<ul>
+  <li><strong>1.0.2:</strong> orienta a pesquisar e verificar endereço completo e coordenadas de hospedagens e atividades, incluindo os dados confirmados e informando limitações de pesquisa.</li>
+  <li><strong>1.0.1:</strong> orienta a IA a usar o pedido de correção copiado do app (problema, local com o nome do item e dica) e a devolver sempre o bloco completo.</li>
+  <li><strong>1.0.0:</strong> primeira versão.</li>
+</ul>
+
 <footer>
   <p>Tripeiro é um app Android pessoal para organizar viagens offline. Skill e exemplos sob <a href="https://github.com/gdonscoi/tripeiro/blob/main/LICENSE">licença MIT</a>. Todos os dados de exemplo são fictícios.</p>
+  <nav class="quicklinks" aria-label="Mais informações">
+    <a href="https://github.com/gdonscoi/tripeiro">Repositório público</a>
+    <a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.md">Guia de suporte</a>
+    <a href="https://github.com/gdonscoi/tripeiro/blob/main/SECURITY.md">Segurança</a>
+  </nav>
 </footer>
 </main>
 <script>

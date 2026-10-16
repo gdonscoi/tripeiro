@@ -17,12 +17,12 @@ Transformar o repositório público na central de suporte do aplicativo e da ski
 Épico: [#4 — Suporte público e proteção do repositório](https://github.com/gdonscoi/tripeiro/issues/4).
 
 - [x] [#5 — Proteções do repositório](https://github.com/gdonscoi/tripeiro/issues/5).
-- [ ] [#6 — Formulários e processo de suporte](https://github.com/gdonscoi/tripeiro/issues/6), depende da #5.
+- [x] [#6 — Formulários e processo de suporte](https://github.com/gdonscoi/tripeiro/issues/6), depende da #5.
 - [ ] [#7 — Entrada pública de ajuda](https://github.com/gdonscoi/tripeiro/issues/7), depende da #6.
 
-Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi entregue no PR #9 em 16/10/2026, com merge confirmado, workflow da main aprovado e Pages publicado. A #6 foi iniciada com autorização do usuário na branch `codex/6-formularios-suporte`; aguarda merge autorizado e conferência dos formulários publicados. A #7 ainda não começou. O checklist acima será marcado após o merge confirmado de cada entrega e suas verificações posteriores.
+Ordem aprovada: proteção, atendimento e entrada pública de ajuda. As fatias #5 (PR #9) e #6 (PR #10) foram entregues em 16/10/2026, com merges confirmados, workflows da main aprovados e Pages publicado. O usuário confirmou em sua sessão que os três formulários aparecem e abrem corretamente. A #7 está implementada na branch `codex/7-entrada-publica-ajuda`, com README e página revisados e preview local validado; aguarda merge autorizado e conferência da publicação no Pages. O checklist acima será marcado após o merge confirmado de cada entrega e suas verificações posteriores.
 
-O funcionamento dos checks, as configurações administrativas e os limites de validação estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). Os formulários e documentos da segunda fatia estão implementados no [PR #10](https://github.com/gdonscoi/tripeiro/pull/10) e orientam o atendimento público conforme [SUPPORT.md](../SUPPORT.md); sua disponibilização depende do merge da #6 e da conferência posterior no GitHub.
+O funcionamento dos checks, as configurações administrativas e os limites de validação estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). Os formulários e guias públicos entregues no [PR #10](https://github.com/gdonscoi/tripeiro/pull/10) orientam o atendimento conforme [SUPPORT.md](../SUPPORT.md). A terceira fatia torna esses canais acessíveis pelo README e pela página, sem alterar a skill ou os downloads.
 
 ## 1. Proteções do repositório
 
@@ -76,16 +76,18 @@ Relatar problemas e sugestões com orientação clara e informações úteis par
 
 ### Critérios de aceite
 
-- [ ] Os três formulários aparecem no seletor e coletam as informações necessárias ao respectivo relato.
-- [ ] Issue em branco não aparece para usuários externos; o mantenedor pode manter a opção administrativa.
-- [ ] Os formulários e guias orientam sobre dados pessoais e não exigem exportação completa de viagem.
-- [ ] O canal privado de segurança está acessível pelo encaminhamento publicado.
-- [ ] Labels e documentos explicam o atendimento, as contribuições e o acompanhamento da solução.
-- [ ] Não há cópia automática entre repositórios nem fechamento por inatividade.
+- [x] Os três formulários aparecem no seletor e coletam as informações necessárias ao respectivo relato.
+- [x] Issue em branco não aparece para usuários externos; o mantenedor pode manter a opção administrativa.
+- [x] Os formulários e guias orientam sobre dados pessoais e não exigem exportação completa de viagem.
+- [x] O canal privado de segurança está acessível pelo encaminhamento publicado.
+- [x] Labels e documentos explicam o atendimento, as contribuições e o acompanhamento da solução.
+- [x] Não há cópia automática entre repositórios nem fechamento por inatividade.
 
 ### Testes e limitações
 
 Revisar YAML, campos obrigatórios, links, labels e texto; executar `git diff --check`. Conferir o seletor e os formulários no GitHub após o merge, registrando essa validação como pendente enquanto os arquivos não estiverem na branch padrão. Não publicar relatos fictícios como se fossem bugs reais.
+
+Resultado da #6: YAML e links locais aprovados; CI do PR e da main aprovados, assim como o Pages. Arquivos publicados e canal privado conferidos pela API; usuário confirmou a renderização e abertura dos três formulários em sua sessão. A ausência da opção em branco para usuários externos foi conferida pela configuração `blank_issues_enabled: false`, sem conta externa para testar envio funcional. Nenhuma issue fictícia foi criada.
 
 ### Fora desta fatia
 
