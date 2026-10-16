@@ -1,0 +1,96 @@
+name: Problema no aplicativo
+description: Relate algo que não funcionou como esperado no Tripeiro.
+title: "[App] "
+labels: [bug, app, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este relato será **público**. Use exemplos fictícios e oculte dados pessoais, bilhetes, localizadores, reservas e documentos nas descrições e capturas. Não envie uma exportação completa da viagem.
+
+        Se suspeitar de uma falha de segurança ou exposição de dados, use o [relato privado de vulnerabilidades](https://github.com/gdonscoi/tripeiro/security/advisories/new), em vez desta issue.
+
+        Confira se o problema já foi relatado nas [issues existentes](https://github.com/gdonscoi/tripeiro/issues). Se for o mesmo, acrescente suas informações lá. Veja também o [guia de suporte](https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.md).
+  - type: input
+    id: app-version
+    attributes:
+      label: Versão do Tripeiro
+      description: Informe a versão instalada. Se não conseguir consultá-la, escreva "não sei".
+      placeholder: Número da versão instalada
+    validations:
+      required: true
+  - type: input
+    id: android-version
+    attributes:
+      label: Versão do Android
+      description: Consulte as informações do aparelho. Se não souber, escreva "não sei".
+      placeholder: "Ex.: Android 16"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Modelo do aparelho
+      description: Informe fabricante e modelo; não inclua número de série, IMEI ou outro identificador pessoal.
+      placeholder: Fabricante e modelo
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afetada
+      options:
+        - Viagens
+        - Trechos de transporte
+        - Hospedagens
+        - Lugares e mapa
+        - Itinerário, notas e checklists
+        - Arquivos e anexos
+        - Importação da IA
+        - Aparência ou idioma
+        - Widget
+        - Android Auto
+        - Wear OS
+        - Outra área ou não sei
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Conte o que fez, desde a tela inicial até o problema. Para relógio ou carro, informe também o modelo e a versão do sistema, se souber.
+      placeholder: |
+        1. Abri uma viagem fictícia...
+        2. Toquei em...
+        3. O problema aconteceu quando...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava que acontecesse?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu?
+      description: Inclua a mensagem de erro, se houver, removendo dados pessoais.
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Com que frequência acontece?
+      options:
+        - Sempre que repito os passos
+        - Às vezes
+        - Aconteceu uma vez
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de tela ou informações adicionais (opcional)
+      description: Você pode anexar uma captura aqui. Antes, oculte nomes, documentos, reservas, localizadores e outros dados pessoais. Não anexe a viagem completa.

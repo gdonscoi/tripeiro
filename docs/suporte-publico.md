@@ -16,13 +16,13 @@ Transformar o repositório público na central de suporte do aplicativo e da ski
 
 Épico: [#4 — Suporte público e proteção do repositório](https://github.com/gdonscoi/tripeiro/issues/4).
 
-- [ ] [#5 — Proteções do repositório](https://github.com/gdonscoi/tripeiro/issues/5).
+- [x] [#5 — Proteções do repositório](https://github.com/gdonscoi/tripeiro/issues/5).
 - [ ] [#6 — Formulários e processo de suporte](https://github.com/gdonscoi/tripeiro/issues/6), depende da #5.
 - [ ] [#7 — Entrada pública de ajuda](https://github.com/gdonscoi/tripeiro/issues/7), depende da #6.
 
-Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi iniciada em 16/10/2026 na branch `codex/5-protecoes-repositorio`, após o merge do plano no PR #8 e a autorização do usuário. As fatias #6 e #7 ainda não começaram. O checklist acima será marcado após o merge confirmado de cada entrega.
+Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi entregue no PR #9 em 16/10/2026, com merge confirmado, workflow da main aprovado e Pages publicado. A #6 foi iniciada com autorização do usuário na branch `codex/6-formularios-suporte`; aguarda merge autorizado e conferência dos formulários publicados. A #7 ainda não começou. O checklist acima será marcado após o merge confirmado de cada entrega e suas verificações posteriores.
 
-O funcionamento dos checks, as configurações administrativas e os limites de validação da primeira fatia estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). A #5 está implementada no [PR #9](https://github.com/gdonscoi/tripeiro/pull/9), com checks locais e no GitHub aprovados e configurações administrativas aplicadas. Aguarda merge autorizado e conferência posterior na main; ainda não está marcada como entregue.
+O funcionamento dos checks, as configurações administrativas e os limites de validação estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). Os formulários e documentos da segunda fatia estão implementados no [PR #10](https://github.com/gdonscoi/tripeiro/pull/10) e orientam o atendimento público conforme [SUPPORT.md](../SUPPORT.md); sua disponibilização depende do merge da #6 e da conferência posterior no GitHub.
 
 ## 1. Proteções do repositório
 
@@ -43,12 +43,12 @@ Proteger os arquivos e a página que distribuem a skill, mantendo os relatos pú
 
 ### Critérios de aceite
 
-- [ ] Usuários externos podem abrir issues, mas não PRs.
-- [ ] Alterações comuns na main exigem PR, checks aprovados e conversas resolvidas.
-- [ ] Force push e exclusão da main estão bloqueados; exceções administrativas estão explícitas.
-- [ ] Exemplos e arquivos publicados inconsistentes são detectados; a fonte atual passa nos checks.
-- [ ] Squash está disponível como único método e merge automático permanece desabilitado.
-- [ ] Relato privado de vulnerabilidades está habilitado e as proteções existentes foram preservadas.
+- [x] Usuários externos podem abrir issues, mas não PRs.
+- [x] Alterações comuns na main exigem PR, checks aprovados e conversas resolvidas.
+- [x] Force push e exclusão da main estão bloqueados; exceções administrativas estão explícitas.
+- [x] Exemplos e arquivos publicados inconsistentes são detectados; a fonte atual passa nos checks.
+- [x] Squash está disponível como único método e merge automático permanece desabilitado.
+- [x] Relato privado de vulnerabilidades está habilitado e as proteções existentes foram preservadas.
 
 ### Testes e limitações
 

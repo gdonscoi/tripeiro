@@ -1,6 +1,6 @@
 # Manutenção e proteções do repositório público
 
-Configurações da fatia [#5](https://github.com/gdonscoi/tripeiro/issues/5), do [plano de suporte público](suporte-publico.md). Este documento é para mantenedores; formulários e guias de suporte serão entregues na #6.
+Configurações da fatia [#5](https://github.com/gdonscoi/tripeiro/issues/5) e operação do suporte da [#6](https://github.com/gdonscoi/tripeiro/issues/6), do [plano de suporte público](suporte-publico.md). Este documento é para mantenedores. Os guias públicos ficam em [SUPPORT.md](../SUPPORT.md), [CONTRIBUTING.md](../CONTRIBUTING.md), [SECURITY.md](../SECURITY.md) e [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md).
 
 ## Publicação e checks
 
@@ -52,6 +52,20 @@ Os testes de regressão usam cópias temporárias e simulam instruções ou exem
 
 Verificação local e oito testes de regressão passaram; o mesmo verificador e os oito testes passaram no GitHub Actions. As configurações de merge, política de PRs, regras efetivas da main, canal de vulnerabilidades e proteções preservadas foram consultadas novamente pela API.
 
-As permissões de usuário externo são verificadas pelas configurações, sem conta externa para teste de abertura de issue/PR. Não são enviados force push nem exclusões de teste à main. Após o merge autorizado, conferir o workflow na main e o deploy do Pages; o conteúdo visual da página não é alterado nesta fatia. Testes Android não se aplicam.
+As permissões de usuário externo são verificadas pelas configurações, sem conta externa para teste de abertura de issue/PR. Não são enviados force push nem exclusões de teste à main. Após o merge do PR #9, o [workflow da main](https://github.com/gdonscoi/tripeiro/actions/runs/38922803969) e o [deploy do Pages](https://github.com/gdonscoi/tripeiro/actions/runs/38922804469) passaram. Testes Android não se aplicam.
+
+## Formulários e operação do suporte
+
+Os três formulários ficam em `.github/ISSUE_TEMPLATE/`: `01-bug-app.yml`, `02-bug-skill.yml` e `03-sugestao.yml`. O `config.yml` desabilita a opção em branco para usuários externos e oferece links para ajuda e relatos privados de segurança. Mantenedores ainda podem ver a opção administrativa de issue em branco; isso é comportamento do GitHub.
+
+As labels `needs-triage`, `needs-info`, `confirmed`, `app` e `skill` foram criadas e conferidas pela API em 16/10/2026. `bug`, `enhancement`, `duplicate` e `documentation` existentes foram preservadas. Os formulários usam labels fixas de tipo/área quando aplicáveis; escolhas em dropdown não alteram labels automaticamente. O mantenedor pode ajustar a área durante a triagem, seguindo [SUPPORT.md](../SUPPORT.md).
+
+Não há workflow de cópia de relatos, triagem ou fechamento por inatividade. As issues públicas acompanham o atendimento; quando uma tarefa privada for necessária, o mantenedor mantém a resposta pública sem expor código, conteúdo pessoal ou links inacessíveis.
+
+Antes do merge da #6: revisar YAML, IDs, tipos de campo, campos obrigatórios, opções, labels e links locais; executar `git diff --check` e o check obrigatório de publicação. Não abrir bugs fictícios como se fossem relatos reais. O parser usado na revisão local não é dependência do projeto.
+
+Revisão local em 16/10/2026: YAML carregado com PyYAML 6.0.3 temporário, estrutura e IDs conferidos (9 campos no formulário do app, 11 no da skill e 4 no de sugestões), campos obrigatórios e capturas opcionais conferidos, opções sem duplicatas e links locais dos seis documentos válidos. O seletor configura `blank_issues_enabled: false` e os dois encaminhamentos. O verificador da publicação passou sem alterar a skill nem os downloads.
+
+Após o merge autorizado da #6: conferir o seletor e os três formulários renderizados, a ausência da opção em branco para visitantes externos, os links de suporte e segurança e o workflow da main. A abertura efetiva por usuário externo depende de conta externa e deve ser registrada como não testada se ela não estiver disponível. O GitHub só disponibiliza os formulários da branch padrão; essa conferência permanece pendente enquanto o PR não tiver sido mesclado.
 
 Referências: [restrição de PRs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests), [rulesets](https://docs.github.com/en/rest/repos/rules), [segurança do Actions](https://docs.github.com/en/actions/reference/security/secure-use) e [relato privado de vulnerabilidades](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting).

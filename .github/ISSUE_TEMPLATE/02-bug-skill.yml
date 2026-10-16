@@ -1,0 +1,101 @@
+name: Problema na skill ou importação da IA
+description: Relate dificuldades com a skill, instruções ou importação do resultado da IA.
+title: "[Skill/IA] "
+labels: [bug, skill, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este relato será **público**. Use uma viagem fictícia; não cole conversas, roteiros reais, bilhetes, localizadores, reservas ou documentos. Uma exportação completa da viagem não é necessária.
+
+        Para falhas de segurança ou exposição de dados, use o [canal privado de vulnerabilidades](https://github.com/gdonscoi/tripeiro/security/advisories/new).
+
+        Confira as [issues existentes](https://github.com/gdonscoi/tripeiro/issues) e o [guia de uso](https://gdonscoi.github.io/tripeiro/) antes de abrir um novo relato. Se for um problema já relatado, acrescente suas informações na issue existente.
+  - type: input
+    id: ai-tool
+    attributes:
+      label: Ferramenta de IA utilizada
+      description: Informe a ferramenta e, se souber, o modelo. Não inclua dados da sua conta.
+      placeholder: "Ex.: Claude Code, ChatGPT ou outra ferramenta"
+    validations:
+      required: true
+  - type: input
+    id: skill-version
+    attributes:
+      label: Versão da skill ou instruções
+      description: Informe a versão baixada ou se usou as instruções copiáveis. Se não souber a versão, escreva "não sei".
+      placeholder: "Ex.: skill 1.0.2 ou instruções copiáveis"
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Versão do Tripeiro
+      description: Para problemas na importação, informe a versão instalada. Se não chegou ao app, escreva "não se aplica"; se não souber, "não sei".
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente utilizado
+      description: Informe sistema e versão da ferramenta; para importação no app, inclua versão do Android e modelo do aparelho. Não envie identificadores pessoais.
+      placeholder: "Ex.: ferramenta no Windows; importação no Android, fabricante e modelo"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Em que etapa aconteceu?
+      options:
+        - Download ou instalação da skill
+        - Uso das instruções copiáveis
+        - Planejamento ou geração do roteiro pela IA
+        - Correção de um resultado pela IA
+        - Importação ou revisão no Tripeiro
+        - Outra etapa ou não sei
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Descreva o que fez. Se necessário, inclua apenas um exemplo mínimo com dados fictícios, sem colar sua conversa ou roteiro real.
+      placeholder: |
+        1. Instalei a skill ou copiei as instruções...
+        2. Pedi à IA uma viagem fictícia...
+        3. Copiei o resultado e...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava que acontecesse?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true
+  - type: textarea
+    id: import-error
+    attributes:
+      label: Mensagem de erro da importação (se houver)
+      description: Copie apenas a mensagem, substituindo nomes e dados pessoais por exemplos fictícios.
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Com que frequência acontece?
+      options:
+        - Sempre que repito os passos
+        - Às vezes
+        - Aconteceu uma vez
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de tela ou informações adicionais (opcional)
+      description: Oculte dados pessoais e informações de viagem antes de anexar capturas. Não anexe sua conversa nem a viagem completa.
