@@ -22,7 +22,7 @@ Transformar o repositório público na central de suporte do aplicativo e da ski
 
 Ordem aprovada: proteção, atendimento e entrada pública de ajuda. A fatia #5 foi entregue no PR #9 em 16/10/2026, com merge confirmado, workflow da main aprovado e Pages publicado. A #6 foi iniciada com autorização do usuário na branch `codex/6-formularios-suporte`; aguarda merge autorizado e conferência dos formulários publicados. A #7 ainda não começou. O checklist acima será marcado após o merge confirmado de cada entrega e suas verificações posteriores.
 
-O funcionamento dos checks, as configurações administrativas e os limites de validação estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). Os formulários e documentos da segunda fatia orientam o atendimento público conforme [SUPPORT.md](../SUPPORT.md); sua disponibilização depende do merge da #6.
+O funcionamento dos checks, as configurações administrativas e os limites de validação estão em [Manutenção e proteções do repositório público](manutencao-repositorio.md). Os formulários e documentos da segunda fatia estão implementados no [PR #10](https://github.com/gdonscoi/tripeiro/pull/10) e orientam o atendimento público conforme [SUPPORT.md](../SUPPORT.md); sua disponibilização depende do merge da #6 e da conferência posterior no GitHub.
 
 ## 1. Proteções do repositório
 
