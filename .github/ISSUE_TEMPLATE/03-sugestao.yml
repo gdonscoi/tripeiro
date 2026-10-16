@@ -1,0 +1,43 @@
+name: Sugerir uma melhoria
+description: Conte uma necessidade e como o Tripeiro poderia ajudar.
+title: "[Sugestão] "
+labels: [enhancement, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sugestão será **pública**. Use exemplos fictícios e não inclua dados pessoais, reservas, localizadores ou documentos.
+
+        Veja se a ideia já aparece nas [issues existentes](https://github.com/gdonscoi/tripeiro/issues). Se aparecer, acrescente seu caso de uso lá. A sugestão será avaliada; abrir uma issue não garante implementação nem prazo.
+
+        Para algo que não funciona como esperado, use um dos formulários de problema. Para falhas de segurança, use o [canal privado](https://github.com/gdonscoi/tripeiro/security/advisories/new).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Onde a melhoria ajudaria?
+      options:
+        - Aplicativo Tripeiro
+        - Skill ou importação da IA
+        - Documentação ou página de ajuda
+        - Outra área ou não sei
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Que necessidade você quer resolver?
+      description: Descreva uma situação concreta com dados fictícios e o que dificulta seu uso hoje.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Como você gostaria que funcionasse?
+      description: Conte o resultado que seria útil para você; não precisa propor uma solução técnica.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas ou contexto adicional (opcional)
+      description: Se já tentou outro caminho, explique. Oculte informações pessoais em qualquer captura.

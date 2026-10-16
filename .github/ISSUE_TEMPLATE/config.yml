@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ajuda e orientações de suporte
+    url: https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.md
+    about: Saiba qual formulário usar, como acompanhar um relato e como proteger seus dados.
+  - name: Reportar uma falha de segurança em privado
+    url: https://github.com/gdonscoi/tripeiro/security/advisories/new
+    about: Suspeitas de vulnerabilidade ou exposição de dados não devem ser publicadas nas issues.
