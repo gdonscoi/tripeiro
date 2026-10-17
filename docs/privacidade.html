@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tripeiro · Política de privacidade</title>
+<meta name="description" content="Como o Tripeiro trata dados de viagens, backups, métricas de uso e diagnósticos.">
+<link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="alternate" hreflang="en" href="en/privacy.html">
+</head>
+<body>
+<main>
+<nav class="quicklinks language" aria-label="Idioma">
+  <a href="privacidade.html" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a>
+  <a href="en/privacy.html" lang="en" hreflang="en">English</a>
+</nav>
+<header>
+  <img class="logo-light" src="assets/logo.svg" alt="Tripeiro" width="320" height="120">
+  <img class="logo-dark" src="assets/logo-escuro.svg" alt="Tripeiro" width="320" height="120">
+  <h1>Política de privacidade</h1>
+  <p class="muted">Atualizada em 17 de outubro de 2026.</p>
+</header>
+<p>Esta política descreve o Tripeiro para Android, seus recursos no Wear OS, Android Auto e widget, e este site. O responsável é <strong>Gerson Donscoi Junior</strong>. Para dúvidas e solicitações de privacidade, escreva para <a href="mailto:donscoijr@gmail.com">donscoijr@gmail.com</a>.</p>
+<p>O Tripeiro organiza viagens sem exigir uma conta própria. Os dados cadastrados ficam no armazenamento do app. Isso não impede transmissões pelos serviços descritos abaixo: mapas, busca de endereços, métricas, diagnósticos, backup do sistema e sincronização com o relógio.</p>
+
+<h2>Viagens e arquivos no aparelho</h2>
+<p>Viagens, destinos, datas, transportes, reservas, hospedagens, contatos cadastrados, atividades, lugares, coordenadas, notas e checklists são salvos em um banco local. O app não lê a agenda de contatos nem solicita a localização atual do aparelho. Coordenadas cadastradas descrevem lugares do roteiro.</p>
+<p>Ao importar um PDF ou imagem como anexo, o app guarda uma cópia em seu armazenamento privado, com nome, tipo e tamanho do arquivo. A exclusão da cópia no app não exclui o original. Temas, idioma e outras preferências também ficam no aparelho. Consultar e editar esses dados não exige internet; o mapa e a busca de endereços podem exigir conexão.</p>
+
+<h2>Backup e transferência entre aparelhos</h2>
+<p>Nas versões com acesso a esta política pelo menu, o banco e as preferências podem participar do backup em nuvem do Android, conforme as configurações da pessoa e os limites do sistema. As cópias dos anexos são excluídas desse backup. Restaurar o banco não recupera esses arquivos: será necessário importá-los novamente. Metadados dos anexos, como nome e tipo, fazem parte do banco.</p>
+<p>No Android 12 ou mais recente, a transferência direta entre aparelhos permite levar banco, preferências e anexos. Sistemas anteriores também podem excluir os anexos da transferência por usarem as regras antigas de backup. A execução depende do Android e do fabricante; não há garantia de uma cópia completa. Versões de teste anteriores podem ter outras regras. O app do relógio declara backup desativado e recebe seus dados pela sincronização com o celular. O responsável pelo Tripeiro não acessa seu backup do Android.</p>
+
+<h2>Mapas e busca de endereços</h2>
+<p>O mapa usa o Google Maps SDK. Exibir e movimentar o mapa envolve consultas das áreas e locais exibidos. O Google também recebe dados técnicos, como IP, identificador próprio do SDK, informações do dispositivo, interações e diagnósticos. A busca de endereços usa o Geocoder do Android e envia o texto pesquisado ao serviço de geocodificação disponível no aparelho. Esses recursos não equivalem a rastrear sua localização atual.</p>
+<p>Ao escolher abrir um lugar ou rota no Google Maps ou outro app, os locais necessários são entregues ao aplicativo escolhido. Consulte a <a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a> e as informações do <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Maps SDK</a>.</p>
+
+<h2>Métricas de uso e diagnósticos</h2>
+<p>A versão de distribuição do celular usa Google Analytics for Firebase para entender o uso e Firebase Crashlytics para investigar falhas. A coleta fica ativa nessa versão, sem opção de desligá-la no menu. Em builds de desenvolvimento, fica desligada por padrão e pode ser ativada para testes. O app do relógio não inclui esses SDKs.</p>
+<p>Os eventos personalizados informam ações e categorias fixas, como abrir uma tela, criar uma viagem ou importar um tipo de arquivo. Não incluem os textos da viagem, códigos de reserva, endereços, coordenadas nem nomes ou conteúdo dos anexos. O Analytics também processa eventos automáticos, identificador da instalação, dados do dispositivo e região aproximada derivada do IP. O app desativa o identificador de publicidade, SSAID e sinais de personalização de anúncios na sua configuração.</p>
+<p>O Crashlytics recebe relatórios técnicos, identificadores de instalação e sessão, dados do dispositivo e estado do app. Erros tratados enviados pelo app removem a mensagem e as causas originais. Falhas fatais automáticas podem incluir a mensagem da exceção; não é possível garantir que um diagnóstico nunca contenha informação incidental. Não adicionamos conteúdo de viagens aos relatórios intencionalmente.</p>
+<p>O Analytics está configurado com retenção de usuários e eventos de <strong>14 meses</strong>, sem redefinir o prazo do identificador por novas atividades. Esse prazo não se aplica aos relatórios agregados padrão. Conforme o Google, os relatórios e identificadores associados do Crashlytics são conservados por 90 dias antes de começar a remoção dos sistemas ativos e de backup. Outros dados operacionais dos serviços seguem os termos do provedor. Veja as informações de <a href="https://firebase.google.com/support/privacy">privacidade do Firebase</a> e de <a href="https://support.google.com/analytics/answer/7667196?hl=pt-BR">retenção do Analytics</a>.</p>
+
+<h2>Relógio, carro e widget</h2>
+<p>O Wear OS recebe um resumo das viagens em andamento e próximas, com transportes, hospedagens e itens datados do itinerário. O resumo pode incluir notas, coordenadas e códigos de reserva nos detalhes. Não inclui os arquivos anexos. A sincronização usa o Data Layer do Google Play services, que pode usar Bluetooth, Wi-Fi ou infraestrutura do Google para conectar seus aparelhos. O relógio mantém o último resumo recebido enquanto aguarda uma atualização.</p>
+<p>O Android Auto e o widget mostram resumos para consulta; não exibem códigos de reserva. Excluir ou alterar uma viagem no celular atualiza esses resumos quando o processamento e a conexão permitirem. Um aparelho desconectado pode continuar mostrando uma cópia antiga até sincronizar. Não há edição de viagens pelo relógio, carro ou widget.</p>
+
+<h2>Exportações, links, IA e suporte</h2>
+<p>Salvar ou compartilhar um roteiro PDF entrega as informações exportadas ao destino escolhido, inclusive dados estruturados incorporados para reimportação; os arquivos anexos não são incorporados. A última exportação compartilhada pode permanecer temporariamente no cache privado até outra exportação ou limpeza pelo Android. Cópias salvas fora do app ou recebidas por outras pessoas não são apagadas ao excluir a viagem.</p>
+<p>Abrir links, telefone, e-mail ou WhatsApp entrega ao app escolhido o endereço ou contato necessário. O planejamento com IA acontece na ferramenta que você escolhe, fora do Tripeiro. O app lê localmente o resultado que você cola; não se conecta à sua conta de IA. O uso dessas ferramentas segue suas próprias políticas.</p>
+<p>Se entrar em contato por e-mail, tratamos os dados que você enviar para responder e acompanhar sua solicitação. Relatos no GitHub são públicos, salvo o canal privado de vulnerabilidades. Não envie bilhetes, reservas ou documentos reais. Você pode solicitar a exclusão das informações de atendimento que estejam sob nosso controle, ressalvadas necessidades de atendimento e obrigações aplicáveis.</p>
+
+<h2>Site, provedores e segurança</h2>
+<p>Este site é hospedado pelo GitHub Pages. Não recebe roteiros nem usa o Firebase Analytics do app. A página de política funciona sem JavaScript e sem login. O site principal escolhe o idioma pelo link ou idioma do navegador; o GitHub pode tratar IP e registros de acesso para operar e proteger a hospedagem, conforme sua <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaração de privacidade</a>.</p>
+<p>Google, GitHub, o provedor de geocodificação e os aplicativos escolhidos podem processar informações em outros países, conforme seus termos. Os dados locais usam o isolamento de armazenamento do Android; os SDKs Google citados usam conexões protegidas. PDFs exportados não ganham senha ou criptografia própria do Tripeiro. Proteja o acesso aos aparelhos, backups e arquivos compartilhados. Nenhum sistema oferece segurança absoluta.</p>
+
+<h2>Retenção, exclusão e suas solicitações</h2>
+<p>Os dados locais permanecem até você excluí-los ou limpar os dados do app. Desinstalar remove o armazenamento local gerenciado pelo Android, mas não apaga automaticamente backups, exportações, informações já recebidas por terceiros ou cópias ainda não atualizadas no relógio. Gerencie o backup nas configurações do Android e as cópias externas nos respectivos destinos.</p>
+<p>Excluir uma viagem remove seus registros relacionados e solicita a limpeza das cópias internas dos anexos. Se a limpeza de um arquivo falhar, o app tenta novamente ao iniciar. Não existe uma conta Tripeiro para excluir; o responsável não possui uma cópia central das suas viagens. Excluir dados locais não apaga automaticamente a telemetria já enviada. Para dúvidas ou pedidos de acesso, correção e exclusão dos dados sob nosso controle, use <a href="mailto:donscoijr@gmail.com">donscoijr@gmail.com</a>. Pode ser necessário verificar sua solicitação; identificadores técnicos nem sempre permitem associar um relatório à pessoa que escreveu.</p>
+<p>O Tripeiro é destinado a adultos. Mudanças nesta política serão publicadas nesta página com uma nova data de atualização.</p>
+<footer><nav class="quicklinks" aria-label="Mais informações"><a href="./?lang=pt">Voltar ao site do Tripeiro</a><a href="en/privacy.html" lang="en">Privacy policy in English</a></nav></footer>
+</main>
+</body>
+</html>

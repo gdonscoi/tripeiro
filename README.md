@@ -58,6 +58,8 @@ Use uma ferramenta compatível com Agent Skills, como o Claude Code, ou copie as
 
 ## Licença
 
+A [política de privacidade em português](docs/privacidade.html) e [em inglês](docs/en/privacy.html) descreve o aplicativo e este site. O processo de publicação e suas verificações estão em [docs/politica-publicacao.md](docs/politica-publicacao.md).
+
 [MIT](LICENSE). Todos os dados de exemplo são fictícios.
 
 ## Histórico da skill

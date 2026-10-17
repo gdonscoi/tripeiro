@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tripeiro · Privacy policy</title>
+<meta name="description" content="How Tripeiro handles trip data, backups, usage metrics and diagnostics.">
+<link rel="icon" href="../assets/simbolo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="alternate" hreflang="pt-BR" href="../privacidade.html">
+</head>
+<body>
+<main>
+<nav class="quicklinks language" aria-label="Language">
+  <a href="../privacidade.html" lang="pt-BR" hreflang="pt-BR">Português</a>
+  <a href="privacy.html" lang="en" hreflang="en" aria-current="page">English</a>
+</nav>
+<header>
+  <img class="logo-light" src="../assets/logo.svg" alt="Tripeiro" width="320" height="120">
+  <img class="logo-dark" src="../assets/logo-escuro.svg" alt="Tripeiro" width="320" height="120">
+  <h1>Privacy policy</h1>
+  <p class="muted">Updated October 17, 2026.</p>
+</header>
+<p>This policy covers Tripeiro for Android, its Wear OS, Android Auto and widget features, and this website. The person responsible is <strong>Gerson Donscoi Junior</strong>. For privacy questions and requests, contact <a href="mailto:donscoijr@gmail.com">donscoijr@gmail.com</a>.</p>
+<p>Tripeiro organizes trips without requiring its own account. Information you enter is stored in the app's storage. This does not prevent transmissions by the services described below: maps, address search, metrics, diagnostics, system backups and watch synchronization.</p>
+
+<h2>Trips and files on your device</h2>
+<p>Trips, destinations, dates, transport, bookings, stays, saved contacts, activities, places, coordinates, notes and checklists are stored in a local database. The app does not read your address book or request the device's current location. Saved coordinates describe places in your itinerary.</p>
+<p>When you import a PDF or image as an attachment, the app keeps a copy in its private storage, together with its name, type and size. Deleting the copy in the app does not delete the original. Themes, language and other preferences are also stored on the device. Reading and editing this information does not require internet access; maps and address searches may need a connection.</p>
+
+<h2>Backups and device transfers</h2>
+<p>In versions that provide access to this policy through the menu, the database and preferences may be included in Android cloud backups, subject to your settings and system limits. Attachment copies are excluded from these backups. Restoring the database does not recover those files: you will need to import them again. Attachment metadata, such as names and types, is part of the database.</p>
+<p>On Android 12 or later, direct device transfers allow the database, preferences and attachments to be transferred. Earlier systems may also exclude attachments from transfers because they use legacy backup rules. Execution depends on Android and the manufacturer; a complete copy is not guaranteed. Earlier test versions may have different rules. The watch app declares backups disabled and receives its data through phone synchronization. Tripeiro's developer does not have access to your Android backup.</p>
+
+<h2>Maps and address searches</h2>
+<p>Maps use the Google Maps SDK. Displaying and moving a map involves requests for the areas and places shown. Google also receives technical data such as IP addresses, an SDK-specific identifier, device information, interactions and diagnostics. Address searches use Android's Geocoder and send the search text to the geocoding service available on the device. These features do not amount to tracking your current location.</p>
+<p>When you choose to open a place or route in Google Maps or another app, the necessary locations are passed to that app. See the <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> and <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Maps SDK information</a>.</p>
+
+<h2>Usage metrics and diagnostics</h2>
+<p>The phone distribution build uses Google Analytics for Firebase to understand usage and Firebase Crashlytics to investigate failures. Collection is active in that build, with no menu option to turn it off. Development builds disable collection by default and may enable it for testing. The watch app does not include these SDKs.</p>
+<p>Custom events report actions and fixed categories, such as opening a screen, creating a trip or importing a file type. They do not include trip text, booking codes, addresses, coordinates, or attachment names or content. Analytics also processes automatic events, an app-instance identifier, device data and approximate region derived from IP addresses. The app disables advertising ID, SSAID and ad-personalization signals in its configuration.</p>
+<p>Crashlytics receives technical reports, installation and session identifiers, device information and app state. Handled errors sent by the app omit the original message and causes. Automatic fatal crash reports may include the exception message; we cannot guarantee that diagnostics never contain incidental information. We do not intentionally add trip content to reports.</p>
+<p>Analytics is configured to retain user and event data for <strong>14 months</strong>, without resetting the user identifier's retention period on new activity. This period does not apply to standard aggregated reports. According to Google, Crashlytics reports and associated identifiers are kept for 90 days before removal from live and backup systems begins. Other service operational data follows the provider's terms. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and <a href="https://support.google.com/analytics/answer/7667196?hl=en">Analytics retention information</a>.</p>
+
+<h2>Watch, car and widget</h2>
+<p>Wear OS receives a summary of ongoing and upcoming trips, including transport, stays and dated itinerary items. It may include notes, coordinates and booking codes in details. Attachment files are not included. Synchronization uses the Google Play services Data Layer, which may use Bluetooth, Wi-Fi or Google infrastructure to connect your devices. The watch keeps the latest received summary while waiting for updates.</p>
+<p>Android Auto and the widget display summaries for viewing and do not display booking codes. Deleting or changing a trip on the phone updates those summaries when processing and connectivity allow. A disconnected device may keep an older copy until it synchronizes. Trips cannot be edited on the watch, car or widget.</p>
+
+<h2>Exports, links, AI and support</h2>
+<p>Saving or sharing a PDF itinerary passes the exported information to your chosen destination, including embedded structured data for reimport; attachment files are not embedded. The latest shared export may remain temporarily in private cache until another export or Android cleanup. Copies saved outside the app or received by other people are not erased when you delete a trip.</p>
+<p>Opening links, phone numbers, email or WhatsApp passes the necessary address or contact to your chosen app. AI planning takes place in the tool you choose, outside Tripeiro. The app reads the result you paste locally and does not connect to your AI account. Those tools have their own policies.</p>
+<p>If you contact us by email, we process the information you send to reply and follow up on your request. GitHub reports are public, except for the private vulnerability channel. Do not send real tickets, bookings or documents. You may request deletion of support information under our control, subject to support needs and applicable obligations.</p>
+
+<h2>Website, providers and security</h2>
+<p>This website is hosted on GitHub Pages. It does not receive itineraries or use the app's Firebase Analytics. The policy page works without JavaScript or login. The main website selects a language from the link or browser language; GitHub may process IP addresses and access logs to operate and protect its hosting under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+<p>Google, GitHub, the geocoding provider and your chosen apps may process information in other countries under their terms. Local data uses Android storage isolation; the Google SDKs mentioned use protected connections. Exported PDFs do not receive a password or Tripeiro-specific encryption. Protect access to your devices, backups and shared files. No system can offer absolute security.</p>
+
+<h2>Retention, deletion and your requests</h2>
+<p>Local data remains until you delete it or clear app data. Uninstalling removes Android-managed local storage but does not automatically erase backups, exports, information already received by third parties, or watch copies that have not yet updated. Manage backups in Android settings and external copies at their destinations.</p>
+<p>Deleting a trip removes its related records and requests cleanup of internal attachment copies. If file cleanup fails, the app tries again at startup. There is no Tripeiro account to delete; the developer does not hold a central copy of your trips. Deleting local data does not automatically erase telemetry already sent. For questions or requests to access, correct or delete information under our control, contact <a href="mailto:donscoijr@gmail.com">donscoijr@gmail.com</a>. We may need to verify your request; technical identifiers do not always allow a report to be associated with the person writing to us.</p>
+<p>Tripeiro is intended for adults. Changes to this policy will be published on this page with a new update date.</p>
+<footer><nav class="quicklinks" aria-label="More information"><a href="./?lang=en">Back to the Tripeiro website</a><a href="../privacidade.html" lang="pt-BR">Política de privacidade em português</a></nav></footer>
+</main>
+</body>
+</html>
