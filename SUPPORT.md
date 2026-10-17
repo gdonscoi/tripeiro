@@ -1,5 +1,7 @@
 # Suporte do Tripeiro
 
+Português | [English](SUPPORT.en.md)
+
 Este repositório é o canal público para problemas e sugestões sobre o aplicativo **Tripeiro**, a skill e a importação de roteiros da IA.
 
 Para instalar e usar a skill, comece pelo [guia de uso](https://gdonscoi.github.io/tripeiro/). Para enviar ou comentar em uma issue, é necessário ter uma conta no GitHub. **Issues e seus anexos são públicos.**

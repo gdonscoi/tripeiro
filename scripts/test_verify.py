@@ -18,7 +18,7 @@ class PublicationChecks(unittest.TestCase):
         if self.root.parent != Path(tempfile.gettempdir()).resolve():
             raise ValueError("Diretório de teste fora do local esperado")
         source = Path(__file__).resolve().parents[1]
-        for name in ("skills", "scripts", "docs"):
+        for name in ("skills", "scripts", "docs", "translations"):
             shutil.copytree(source / name, self.root / name, ignore=shutil.ignore_patterns("__pycache__"))
         metadata = (self.root / "skills/tripeiro/SKILL.md").read_text(encoding="utf-8-sig")
         version = re.search(r'^\s*version:\s*"([^"]+)"', metadata, re.MULTILINE)[1]
@@ -40,6 +40,18 @@ class PublicationChecks(unittest.TestCase):
         with (self.root / "docs/instrucoes.txt").open("a", encoding="utf-8") as file:
             file.write("\nConteúdo divergente\n")
         with self.assertRaisesRegex(ValueError, "instrucoes.txt desatualizado"):
+            verify(self.root)
+
+    def test_stale_english_instructions_fail(self):
+        with (self.root / "docs/en/instrucoes.txt").open("a", encoding="utf-8") as file:
+            file.write("\nStale content\n")
+        with self.assertRaisesRegex(ValueError, "en/instrucoes.txt desatualizado"):
+            verify(self.root)
+
+    def test_stale_english_reference_fails(self):
+        with (self.root / "docs/en/formato-do-roteiro.md").open("a", encoding="utf-8") as file:
+            file.write("\nStale reference\n")
+        with self.assertRaisesRegex(ValueError, "en/formato-do-roteiro.md desatualizado"):
             verify(self.root)
 
     def test_valid_but_stale_example_fails(self):

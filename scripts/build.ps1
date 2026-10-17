@@ -56,4 +56,36 @@ $fence
 "@
 [IO.File]::WriteAllText((Join-Path $docs 'instrucoes.txt'), ($text -replace "`r`n", "`n") + "`n", $utf8)
 Copy-Item -Force (Join-Path $skill 'assets\exemplo-roteiro.json') (Join-Path $docs 'exemplo-roteiro.json')
+
+# Tradução de uso separada da skill instalável; mantém os ZIPs existentes.
+$englishSource = Join-Path $root 'translations\en'
+$englishOutput = Join-Path $docs 'en'
+New-Item -ItemType Directory -Force $englishOutput | Out-Null
+$englishSkill = [IO.File]::ReadAllText((Join-Path $englishSource 'skill.md'), $utf8).Trim()
+if (-not $englishSkill.Contains("skill $version,")) { throw 'Tradução inglesa não corresponde à versão da skill' }
+$englishFormat = [IO.File]::ReadAllText((Join-Path $englishSource 'formato-do-roteiro.md'), $utf8).Trim()
+$englishExample = [IO.File]::ReadAllText((Join-Path $englishSource 'exemplo-roteiro.json'), $utf8).Trim()
+$englishText = @"
+Tripeiro instructions (skill $version, tripeiro-plan format 1). Paste this text at the start of your AI conversation or in your project instructions.
+The format reference and fictional example linked below are included at the end of this text.
+
+$englishSkill
+
+---
+
+$englishFormat
+
+---
+
+# Fictional example (exemplo-roteiro.json)
+
+${fence}json
+$englishExample
+$fence
+"@
+[IO.File]::WriteAllText((Join-Path $englishOutput 'instrucoes.txt'), ($englishText -replace "`r`n", "`n") + "`n", $utf8)
+foreach ($name in @('skill.md', 'formato-do-roteiro.md', 'exemplo-roteiro.json')) {
+    $translated = [IO.File]::ReadAllText((Join-Path $englishSource $name), $utf8)
+    [IO.File]::WriteAllText((Join-Path $englishOutput $name), ($translated -replace "`r`n", "`n"), $utf8)
+}
 Write-Output "skill $version -> $zip"

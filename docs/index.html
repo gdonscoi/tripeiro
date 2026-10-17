@@ -6,61 +6,16 @@
 <title>Tripeiro · Planeje com sua IA e encontre ajuda</title>
 <meta name="description" content="Instale a skill do Tripeiro, importe roteiros da sua IA e encontre ajuda, relatos de problemas, sugestões e novidades.">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
-<style>
-  :root {
-    --bg:#FAF9FC; --surface:#FFFFFF; --raised:#F2EFF7; --text:#282332; --muted:#6E657C; --line:#DED8E8;
-    --primary:#7040C0; --hover:#5E32A8; --on:#FFFFFF; --soft:#EEE7F8; --softtext:#6435AC; --error:#AC3046;
-    --radius:16px; color-scheme:light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg:#17141D; --surface:#211C2A; --raised:#2B2436; --text:#F3EEF8; --muted:#B8ADC8; --line:#44384F;
-      --primary:#BB9AF0; --hover:#CCB2F6; --on:#241336; --soft:#352746; --softtext:#D6BDFB; --error:#FF9BAA;
-      color-scheme:dark;
-    }
-    .logo-light { display:none; }
-    .logo-dark { display:block !important; }
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Segoe UI", Roboto, system-ui, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
-  header { padding:16px 0 8px; }
-  header img { width:240px; max-width:70%; height:auto; }
-  .logo-dark { display:none; }
-  h1 { font-size:1.9rem; line-height:1.25; margin:16px 0 8px; }
-  h2 { font-size:1.35rem; margin:40px 0 12px; }
-  h3 { font-size:1.05rem; margin:20px 0 6px; }
-  p, li { color:var(--text); }
-  .lead { font-size:1.1rem; color:var(--muted); }
-  a { color:var(--primary); }
-  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin:16px 0; }
-  .soft { background:var(--soft); color:var(--softtext); border:none; }
-  ol.steps { padding-left:1.3em; }
-  ol.steps li { margin:8px 0; }
-  .button { display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:12px 20px; border-radius:999px;
-    background:var(--primary); color:var(--on); text-decoration:none; font-weight:600; border:none; font-size:1rem; cursor:pointer; }
-  .button:hover { background:var(--hover); }
-  .button.secondary { background:var(--soft); color:var(--softtext); }
-  .actions { display:flex; flex-wrap:wrap; gap:12px; margin:12px 0; }
-  .quicklinks { display:flex; flex-wrap:wrap; gap:4px 20px; margin:12px 0; }
-  .quicklinks a { display:inline-flex; align-items:center; min-height:48px; text-underline-offset:4px; }
-  details { padding:12px 0; border-bottom:1px solid var(--line); }
-  summary { min-height:48px; padding:10px 0; font-weight:600; cursor:pointer; }
-  details p { margin:8px 0 12px; }
-  code, pre { font-family:Consolas, "Roboto Mono", monospace; font-size:.9rem; }
-  code { background:var(--raised); padding:1px 6px; border-radius:6px; }
-  pre { background:var(--raised); padding:16px; border-radius:12px; overflow-x:auto; white-space:pre; }
-  blockquote { margin:0; padding:12px 16px; border-left:4px solid var(--primary); background:var(--raised); border-radius:0 12px 12px 0; }
-  table { width:100%; border-collapse:collapse; display:block; overflow-x:auto; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  .muted { color:var(--muted); font-size:.95rem; }
-  #copy-status { margin-left:4px; color:var(--muted); }
-  footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
-  :focus-visible { outline:3px solid var(--primary); outline-offset:2px; }
-</style>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/language.js"></script>
 </head>
 <body>
 <main>
+<nav class="quicklinks language" aria-label="Idioma">
+  <a href="?lang=pt" data-language="pt" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a>
+  <span aria-hidden="true">|</span>
+  <a href="en/?lang=en" data-language="en" lang="en" hreflang="en">English</a>
+</nav>
 <header>
   <img class="logo-light" src="assets/logo.svg" alt="Tripeiro" width="320" height="120">
   <img class="logo-dark" src="assets/logo-escuro.svg" alt="Tripeiro" width="320" height="120">
@@ -224,17 +179,5 @@
   </nav>
 </footer>
 </main>
-<script>
-  document.getElementById('copy').addEventListener('click', async () => {
-    const status = document.getElementById('copy-status');
-    try {
-      const text = await (await fetch('instrucoes.txt')).text();
-      await navigator.clipboard.writeText(text);
-      status.textContent = 'Instruções copiadas.';
-    } catch (e) {
-      status.textContent = 'Não foi possível copiar. Use “Abrir o texto” e copie de lá.';
-    }
-  });
-</script>
 </body>
 </html>

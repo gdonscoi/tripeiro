@@ -70,7 +70,8 @@ def verify(root):
     if not match:
         raise ValueError("SKILL.md sem versão semântica em metadata.version")
     version = match[1]
-    for path in (skill / "assets/exemplo-roteiro.json", root / "docs/exemplo-roteiro.json"):
+    for path in (skill / "assets/exemplo-roteiro.json", root / "docs/exemplo-roteiro.json",
+                 root / "translations/en/exemplo-roteiro.json", root / "docs/en/exemplo-roteiro.json"):
         check_example(path)
     shell = shutil.which("pwsh")
     if not shell:
@@ -82,7 +83,8 @@ def verify(root):
             raise ValueError("Diretório temporário fora do local esperado")
         subprocess.run([shell, "-NoProfile", "-File", str(root / "scripts/build.ps1"),
                         "-OutputDirectory", str(output)], check=True)
-        for name in ("instrucoes.txt", "exemplo-roteiro.json"):
+        for name in ("instrucoes.txt", "exemplo-roteiro.json", "en/instrucoes.txt",
+                     "en/skill.md", "en/formato-do-roteiro.md", "en/exemplo-roteiro.json"):
             if content((root / "docs" / name).read_bytes(), name) != content((output / name).read_bytes(), name):
                 raise ValueError(f"docs/{name} desatualizado; execute scripts/build.ps1")
         name = f"tripeiro-skill-{version}.zip"

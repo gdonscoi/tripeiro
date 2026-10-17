@@ -1,0 +1,104 @@
+{
+  "format": "tripeiro-plan",
+  "version": 1,
+  "trip": {
+    "name": "Family trip to Serra Gaúcha",
+    "destination": "Gramado, Brazil",
+    "startDate": "2027-07-10",
+    "endDate": "2027-07-14",
+    "notes": "Fictional example trip. Bring warm coats: July is winter in the mountains."
+  },
+  "transports": [
+    {
+      "mode": "FLIGHT",
+      "origin": "São Paulo (GRU)",
+      "destination": "Porto Alegre (POA)",
+      "departure": "2027-07-10T07:30",
+      "arrival": "2027-07-10T09:10",
+      "company": "Example Airline",
+      "number": "EX 1234",
+      "seat": "14C",
+      "booking": "ABC123",
+      "notes": "Check one bag."
+    },
+    {
+      "mode": "CAR",
+      "origin": "Porto Alegre",
+      "destination": "Gramado",
+      "departure": "2027-07-10",
+      "arrival": "2027-07-10",
+      "notes": "Rental car at the airport; about 2 hours by road."
+    },
+    {
+      "mode": "BUS",
+      "origin": "Gramado",
+      "destination": "Canela",
+      "departure": "2027-07-11T09:00"
+    },
+    {
+      "mode": "TRAIN",
+      "origin": "Bento Gonçalves",
+      "destination": "Carlos Barbosa",
+      "departure": "2027-07-12T14:00",
+      "arrival": "2027-07-12T16:30",
+      "notes": "Suggested tour; check times before booking."
+    },
+    {
+      "mode": "BOAT",
+      "origin": "Lakeshore",
+      "destination": "Lake island",
+      "departure": "2027-07-13T10:00"
+    },
+    {
+      "mode": "OTHER",
+      "modeName": "Transfer",
+      "origin": "Gramado",
+      "destination": "Porto Alegre Airport",
+      "departure": "2027-07-14T13:00"
+    }
+  ],
+  "stays": [
+    {
+      "name": "Example Guesthouse",
+      "address": "100 Fictional Street, Gramado",
+      "checkIn": "2027-07-10",
+      "checkOut": "2027-07-14",
+      "notes": "Breakfast included."
+    }
+  ],
+  "itinerary": [
+    {
+      "type": "ACTIVITY",
+      "day": "2027-07-11",
+      "title": "Walk around downtown",
+      "time": "10:30",
+      "address": "Avenida Borges de Medeiros, Gramado",
+      "notes": "Suggestion: check shop opening hours."
+    },
+    {
+      "type": "NOTE",
+      "day": "2027-07-11",
+      "notes": "Book a dinner table the day before."
+    },
+    {
+      "type": "ACTIVITY",
+      "day": "2027-07-12",
+      "title": "Vale dos Vinhedos wineries",
+      "time": "09:00"
+    },
+    {
+      "type": "CHECKLIST",
+      "title": "Before leaving home",
+      "items": [
+        { "text": "Documents", "done": true },
+        { "text": "Chargers" },
+        { "text": "Coats and gloves" }
+      ]
+    }
+  ],
+  "contacts": [
+    { "kind": "PHONE", "name": "Guesthouse reception", "value": "+55 54 3000-0000" },
+    { "kind": "EMAIL", "name": "Guesthouse reservations", "value": "reservas@example.com" },
+    { "kind": "LINK", "name": "City map", "value": "https://example.com/mapa", "notes": "Fictional link." }
+  ]
+}
