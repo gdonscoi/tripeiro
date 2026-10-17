@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tripeiro · Plan with your AI and find help</title>
+<meta name="description" content="Install the Tripeiro skill, import itineraries from your AI and find help, bug reports, suggestions and updates.">
+<link rel="icon" href="../assets/simbolo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/language.js"></script>
+</head>
+<body>
+<main>
+<nav class="quicklinks language" aria-label="Language">
+  <a href="../?lang=pt" data-language="pt" lang="pt-BR" hreflang="pt-BR">Português</a>
+  <span aria-hidden="true">|</span>
+  <a href="?lang=en" data-language="en" lang="en" hreflang="en" aria-current="page">English</a>
+</nav>
+<header>
+  <img class="logo-light" src="../assets/logo.svg" alt="Tripeiro" width="320" height="120">
+  <img class="logo-dark" src="../assets/logo-escuro.svg" alt="Tripeiro" width="320" height="120">
+  <h1>Plan with your AI</h1>
+  <p class="lead">Talk to the AI you already use, get your itinerary and import it as a new trip in Tripeiro. You can change and fine-tune it whenever you like in the app.</p>
+</header>
+
+<nav class="quicklinks" aria-label="On this page">
+  <a href="#instalar">Install</a>
+  <a href="#importar">How to use</a>
+  <a href="#ajuda">Help and support</a>
+  <a href="#perguntas">Frequently asked questions</a>
+  <a href="#historico">Skill updates</a>
+</nav>
+
+<div class="card soft">
+  The AI stays outside the app: Tripeiro does not connect to your AI account, use a key or send your data. You copy the result from the conversation and paste it into the app, which checks everything on your phone, offline. This page distributes the skill and gathers help links; it does not receive or store itineraries.
+</div>
+
+<h2 id="como-funciona">How it works</h2>
+<ol class="steps">
+  <li><strong>Prepare your AI:</strong> install the Tripeiro skill or copy the instructions into the conversation (see below).</li>
+  <li><strong>Plan your trip:</strong> discuss your destination, dates, preferences and what is already booked. A plan you have already discussed works too.</li>
+  <li><strong>Ask for the result:</strong> <em>“Prepare this itinerary to import into Tripeiro using the skill.”</em></li>
+  <li><strong>Bring it to the app:</strong> copy the whole block and, in Tripeiro, tap <strong>Plan with your AI → I have the result</strong> (on the home screen) or <strong>⋮ → Import from AI</strong>. Review it and tap <strong>Create new trip</strong>.</li>
+</ol>
+<p class="muted">Each import creates a new trip; your existing trips stay unchanged. Attachments and images from the conversation are not transferred.</p>
+
+<h2 id="baixar">Download the skill</h2>
+<div class="card">
+  <p><strong>Skill 1.0.2</strong> · <code>tripeiro-plan</code> format version 1 · MIT license</p>
+  <div class="actions">
+    <a class="button" href="../downloads/tripeiro-skill-1.0.2.zip" download>Download tripeiro-skill-1.0.2.zip</a>
+    <a class="button secondary" href="skill.md">Read the skill in English</a>
+  </div>
+  <p class="muted">The ZIP contains the <code>tripeiro/</code> folder with <code>SKILL.md</code>, the format reference and a fictional example, following the open <a href="https://agentskills.io/specification">Agent Skills</a> standard. There are no programs to run. The installable files are in Portuguese; the skill instructs the AI to talk in your language. The English documentation and copyable instructions are available below.</p>
+</div>
+
+<h2 id="instalar">Install</h2>
+<p>Each tool has its own way to install skills, and some do not support them. There is no universal installer: follow your tool’s instructions or use the copyable alternative.</p>
+<h3>Tools compatible with Agent Skills</h3>
+<ul>
+  <li><strong>Claude Code:</strong> extract the ZIP and put the <code>tripeiro</code> folder in <code>~/.claude/skills/</code> (or in a project’s <code>.claude/skills/</code>).</li>
+  <li><strong>Other tools:</strong> look for “skills” in your tool’s settings or documentation and upload the ZIP or the <code>tripeiro</code> folder.</li>
+</ul>
+<h3 id="copiar">Alternative: copy the instructions</h3>
+<p>To use a conversational AI, including on your phone, copy the text and paste it at the start of the conversation (or in a project’s instructions).</p>
+<div class="actions">
+  <button class="button" id="copy" type="button">Copy instructions</button>
+  <a class="button secondary" href="instrucoes.txt">Open the text</a>
+  <span id="copy-status" role="status" aria-live="polite"></span>
+</div>
+
+<h2 id="exemplo">Example conversation</h2>
+<blockquote>I want to visit Lisbon and Porto from May 2 to 7, 2027. The flight is already booked: TP 88, departing Guarulhos on May 2 at 22:05 and arriving on May 3 at 11:20. In Lisbon we are staying at Example Chiado Hotel from May 3 to 5. We want to take a train to Porto on the morning of May 5. Prepare this itinerary to import into Tripeiro using the skill.</blockquote>
+<p>The AI replies with a single code block like this (excerpt):</p>
+<pre><code>{
+  "format": "tripeiro-plan",
+  "version": 1,
+  "trip": { "name": "Lisbon and Porto", "destination": "Lisbon, Portugal",
+            "startDate": "2027-05-02", "endDate": "2027-05-07" },
+  "transports": [
+    { "mode": "FLIGHT", "origin": "São Paulo (GRU)", "destination": "Lisbon (LIS)",
+      "departure": "2027-05-02T22:05", "arrival": "2027-05-03T11:20", "number": "TP 88" },
+    { "mode": "TRAIN", "origin": "Lisbon", "destination": "Porto",
+      "notes": "Morning of May 5; time to be confirmed." }
+  ],
+  ...
+}</code></pre>
+<p class="muted">Notice that no train time was invented. <a href="exemplo-roteiro.json">Complete example</a> · <a href="formato-do-roteiro.md">Format reference</a></p>
+
+<h2 id="importar">Import into Tripeiro</h2>
+<ol class="steps">
+  <li>In the conversation, copy the whole code block (many AIs have a “Copy” button on the block).</li>
+  <li>In Tripeiro, tap <strong>Plan with your AI → I have the result</strong> or <strong>⋮ → Import from AI</strong>.</li>
+  <li>Tap the field, paste the result and tap <strong>Review result</strong>.</li>
+  <li>Review the trip, transport, stays, itinerary and contacts. Check suggested places and times.</li>
+  <li>Tap <strong>Create new trip</strong>. You can then edit anything in the app.</li>
+</ol>
+
+<h2 id="problemas">If the app refuses the result</h2>
+<p>The app explains the problem and, when possible, where it is (for example, <code>Where: transports › 2 › departure</code>, counting from 1). Tap <strong>Copy correction request</strong>, paste the request into your AI conversation and, when it replies, tap the field’s <strong>×</strong> to clear it and paste the new complete block. The hint below the message shows the expected format.</p>
+<table>
+  <thead><tr><th>Message</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>Incomplete or damaged result</td><td>Copy the whole block again, from the first line to the last.</td></tr>
+    <tr><td>More than one code block</td><td>Ask the AI for a single block containing the whole trip.</td></tr>
+    <tr><td>Field Tripeiro does not know</td><td>Ask the AI to follow the skill’s format and move extra information to notes.</td></tr>
+    <tr><td>Field not used by this item type</td><td>For example, a company on a car leg or a title on a note. Ask the AI to remove it or move it to notes.</td></tr>
+    <tr><td>Invalid or missing time</td><td>Only car legs allow a date without a time. Provide the time or omit departure/arrival.</td></tr>
+    <tr><td>Day outside trip dates</td><td>Adjust the day or the trip dates.</td></tr>
+    <tr><td>Newer format</td><td>Update Tripeiro or ask for format version 1.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="ajuda">Help and support</h2>
+<p>Did something go wrong, or do you have an idea to improve Tripeiro? Support for the app and the skill uses public GitHub issues. <a href="https://github.com/gdonscoi/tripeiro/issues?q=is%3Aissue">Search existing reports</a> before opening a new one; if you find the same case, add your information there.</p>
+<div class="card">
+  <h3>Choose what you need</h3>
+  <div class="actions">
+    <a class="button" href="https://github.com/gdonscoi/tripeiro/issues/new?template=01-bug-app.yml">App problem</a>
+    <a class="button secondary" href="https://github.com/gdonscoi/tripeiro/issues/new?template=02-bug-skill.yml">Skill or AI problem</a>
+    <a class="button secondary" href="https://github.com/gdonscoi/tripeiro/issues/new?template=03-sugestao.yml">Suggest an improvement</a>
+  </div>
+  <p><strong>A GitHub account is required to submit or comment. Your report and attachments will be public.</strong> Use fictional examples and hide personal data, tickets, booking references, reservations and documents. Do not send your whole trip or AI conversation.</p>
+  <p>Include versions, device or tool, steps, expected result and what happened. Screenshots are optional. If you do not know a version, say so.</p>
+  <p><a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.en.md">How support works and how to follow your issue</a></p>
+</div>
+<div class="card soft">
+  <h3>Security flaw or data exposure?</h3>
+  <p>Use the <a href="https://github.com/gdonscoi/tripeiro/security/advisories/new">private vulnerability channel</a>, which also requires a GitHub account. Do not publish details in an issue. See the <a href="https://github.com/gdonscoi/tripeiro/blob/main/SECURITY.en.md">security policy</a> for what to include.</p>
+</div>
+
+<h2 id="perguntas">Frequently asked questions</h2>
+<details>
+  <summary>Do I need a GitHub account to use the skill?</summary>
+  <p>No. You can download the skill or open and copy the instructions on this page without a GitHub account. To submit or comment on a report, suggestion or vulnerability on GitHub, you need to sign in. Your chosen AI tool may have its own access requirements.</p>
+</details>
+<details>
+  <summary>My tool does not support skills. What can I do?</summary>
+  <p>Use the <a href="#copiar">copyable alternative</a>: open the instructions and paste the text at the start of the conversation or in your AI project’s instructions.</p>
+</details>
+<details>
+  <summary>Does importing change an existing trip?</summary>
+  <p>No. Each import creates a new trip after your review. Existing trips stay unchanged, and attachments and images from the conversation are not transferred.</p>
+</details>
+<details>
+  <summary>Tripeiro refused the AI result. What should I do?</summary>
+  <p>Use <strong>Copy correction request</strong> in the app and paste the request into your AI conversation. Then clear the field and paste the new complete block. See the <a href="#problemas">messages and correction guidance</a> too. If the problem persists, use the <a href="https://github.com/gdonscoi/tripeiro/issues/new?template=02-bug-skill.yml">skill or AI import problem</a> form with a fictional example.</p>
+</details>
+<details>
+  <summary>Do I need to send my trip to report a problem?</summary>
+  <p>No. Describe the steps with fictional data and, if useful, include a screenshot with personal information hidden. Do not send the whole trip, tickets, documents, reservations or your full AI conversation. Suspected vulnerabilities go to the private security channel.</p>
+</details>
+<details>
+  <summary>How do I follow a fix or suggestion?</summary>
+  <p>Follow the comments on your issue and use GitHub’s subscribe option to get updates. The maintainer may ask for more information and will share the fixed version or published change when delivered. Suggestions are evaluated without a guaranteed implementation date. See the <a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.en.md">support guide</a>.</p>
+</details>
+
+<h2 id="verificado">Versions and compatibility</h2>
+<table>
+  <thead><tr><th>Skill</th><th>Format</th><th>Tripeiro app</th></tr></thead>
+  <tbody><tr><td>1.0.0 to 1.0.2</td><td><code>tripeiro-plan</code> 1</td><td>Version with “Import from AI” and the “Plan with your AI” card</td></tr></tbody>
+</table>
+<p>Use a tool compatible with Agent Skills, such as Claude Code, or copy the instructions into your conversational AI. Installation depends on your chosen tool.</p>
+
+<h2 id="historico">Skill updates</h2>
+<p class="muted">This history covers the skill distributed on this page.</p>
+<ul>
+  <li><strong>1.0.2:</strong> instructs the AI to research and verify full addresses and coordinates for stays and activities, include confirmed data and disclose research limitations.</li>
+  <li><strong>1.0.1:</strong> instructs the AI to use the correction request copied from the app (problem, location with item name and hint) and always return the complete block.</li>
+  <li><strong>1.0.0:</strong> first version.</li>
+</ul>
+
+<footer>
+  <p>Tripeiro is a personal Android app for organizing trips offline. Skill and examples under the <a href="https://github.com/gdonscoi/tripeiro/blob/main/LICENSE">MIT license</a>. All example data is fictional.</p>
+  <nav class="quicklinks" aria-label="More information">
+    <a href="https://github.com/gdonscoi/tripeiro">Public repository</a>
+    <a href="https://github.com/gdonscoi/tripeiro/blob/main/SUPPORT.en.md">Support guide</a>
+    <a href="https://github.com/gdonscoi/tripeiro/blob/main/SECURITY.en.md">Security</a>
+  </nav>
+</footer>
+</main>
+</body>
+</html>

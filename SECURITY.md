@@ -1,5 +1,7 @@
 # Segurança do Tripeiro
 
+Português | [English](SECURITY.en.md)
+
 Se suspeitar de uma vulnerabilidade ou exposição de dados no Tripeiro, na skill ou na distribuição pública, use [Report a vulnerability](https://github.com/gdonscoi/tripeiro/security/advisories/new). Esse formulário envia um relato privado ao mantenedor e exige conta no GitHub.
 
 **Não publique detalhes de vulnerabilidades nas issues ou em Discussions.** Para problemas comuns de uso e sugestões, siga o [guia de suporte](SUPPORT.md).

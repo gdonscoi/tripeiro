@@ -1,5 +1,7 @@
 # Tripeiro · Guia e suporte
 
+Português | [English](README.en.md)
+
 Skill para planejar viagens com a IA que você já usa e importar o resultado como uma nova viagem no **Tripeiro**, app Android pessoal para organizar viagens offline.
 
 Este também é o canal público de suporte do aplicativo e da skill. Comece pela [página de uso e ajuda](https://gdonscoi.github.io/tripeiro/).
