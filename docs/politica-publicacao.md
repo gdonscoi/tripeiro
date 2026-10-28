@@ -20,3 +20,7 @@ Política preparada em 17/10/2026 para o primeiro lançamento do app Tripeiro. R
 ## Depois do merge autorizado
 
 Esperar a publicação do GitHub Pages e verificar HTTP 200, idioma, responsável/contato e navegação nas duas URLs públicas. Só depois liberar o link da política na versão distribuída do app. Até esse momento as URLs acima são destinos de publicação, não evidência de disponibilidade. Este PR não envia o app à Play nem preenche o formulário de Segurança dos dados.
+
+## Atualização de 23/10/2026 — Tripeiro Plus e viagem compartilhada
+
+Novas seções nas duas políticas: Tripeiro Plus (Google Play Billing e RevenueCat), viagem compartilhada e conta Google (Firebase Authentication, Cloud Firestore, convidado anônimo, Install Referrer, App Check com Play Integrity, Firebase Hosting) e exclusão da conta (no app, por e-mail e na página `https://travel-memory-6b1af.web.app/excluir-conta`). Retenção da viagem compartilhada e do estado da assinatura, e a seção de provedores, também mudaram. A frase "não existe conta Tripeiro" saiu. Base: `docs/lancamento-plus.md` e `docs/servidor-firebase.md` do repositório do app. Publicar antes de a versão com o Plus ir para a produção.
